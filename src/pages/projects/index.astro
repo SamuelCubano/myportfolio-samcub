@@ -12,27 +12,27 @@
       content="Proyectos de Samuel Cubano: ejemplos reales de desarrollo web con enfoque en frontend y experiencia de usuario."
     />
     <link rel="stylesheet" href="/style/style-projects.css" />
+    <link rel="stylesheet" href="/style/style.css" />
   </head>
-  <body>
+  <body class="theme-dark">
     <!-- HEADER / NAV -->
     <header class="site-header">
       <nav class="nav">
-        <a href="/index.html#hero" class="nav__brand">
+        <a href="#hero" class="nav__brand">
+          <div class="nav__logo"></div>
           <span class="nav__brand-text">Samuel Cubano</span>
         </a>
 
         <div class="nav__right">
           <ul class="nav__links">
-            <li><a href="/index.html#hero">Inicio</a></li>
-            <li><a href="/about.html">Sobre mí</a></li>
-            <li><a href="/skills.html">Skills</a></li>
-            <li>
-              <a href="/projects.html" class="nav__link--active">Proyectos</a>
-            </li>
-            <li><a href="/index.html#services">Servicios</a></li>
-            <li><a href="/index.html#contact">Contacto</a></li>
+            <li><a href="/aboutme/">Sobre mí</a></li>
+            <li><a href="/skills/">Skills</a></li>
+            <li><a href="/projects/">Proyectos</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
 
+          <!-- Toggle tema -->
           <button
             class="theme-toggle"
             type="button"
@@ -41,8 +41,9 @@
             <span class="theme-toggle__icon">🌙</span>
           </button>
 
-          <a href="/index.html#contact" class="nav__cta">Hablemos</a>
+          <a href="#contact" class="nav__cta">Hablemos</a>
 
+          <!-- Hamburguesa -->
           <button
             class="nav__toggle"
             type="button"
@@ -73,23 +74,11 @@
           </div>
 
           <ul class="mobile-menu__links">
-            <li><a href="/index.html#hero" data-close-menu>INICIO</a></li>
-            <li><a href="/about.html" data-close-menu>SOBRE MÍ</a></li>
-            <li><a href="/skills.html" data-close-menu>SKILLS</a></li>
-            <li>
-              <a
-                href="/projects.html"
-                data-close-menu
-                class="nav__link--active"
-                >PROYECTOS</a
-              >
-            </li>
-            <li>
-              <a href="/index.html#services" data-close-menu>SERVICIOS</a>
-            </li>
-            <li>
-              <a href="/index.html#contact" data-close-menu>CONTACTO</a>
-            </li>
+            <li><a href="#about" data-close-menu>SOBRE MÍ</a></li>
+            <li><a href="#skills" data-close-menu>SKILLS</a></li>
+            <li><a href="#projects" data-close-menu>PROYECTOS</a></li>
+            <li><a href="#services" data-close-menu>SERVICIOS</a></li>
+            <li><a href="#contact" data-close-menu>CONTACTO</a></li>
           </ul>
 
           <div class="mobile-menu__bottom">
@@ -103,7 +92,7 @@
             </button>
 
             <a
-              href="/index.html#contact"
+              href="#contact"
               class="mobile-menu__cta"
               data-close-menu
             >
@@ -610,6 +599,300 @@
       </p>
     </footer>
 
-    <script src="/main.js"></script>
+    <script>
+// ===============================
+// SELECTORES GENERALES
+// ===============================
+const body = document.body;
+const toggleBtn = document.querySelector(".nav__toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeTriggers = document.querySelectorAll("[data-close-menu]");
+const desktopThemeToggle = document.querySelector(".theme-toggle");
+const mobileThemeToggle = document.querySelector(".theme-toggle--mobile");
+const yearSpan = document.getElementById("year");
+const revealEls = document.querySelectorAll(".reveal");
+
+// Modal contacto
+const contactModal = document.getElementById("contact-modal");
+const openModalBtn = document.getElementById("open-contact-modal");
+const closeModalEls = document.querySelectorAll("[data-close-modal]");
+const copyEmailBtn = document.getElementById("copy-email-btn");
+const copiedBadge = document.getElementById("copied-badge");
+const CONTACT_EMAIL = "samcubdev@gmail.com";
+
+// ===============================
+// NAV / MENÚ MÓVIL
+// ===============================
+function setMenu(open) {
+  if (!toggleBtn || !mobileMenu) return;
+  body.classList.toggle("nav-open", open);
+  toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
+}
+
+if (toggleBtn && mobileMenu) {
+  let isOpen = false;
+
+  toggleBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    setMenu(isOpen);
+  });
+
+  closeTriggers.forEach((el) => {
+    el.addEventListener("click", () => {
+      isOpen = false;
+      setMenu(false);
+    });
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen) {
+      isOpen = false;
+      setMenu(false);
+    }
+  });
+}
+
+// ===============================
+// TEMA OSCURO / CLARO
+// ===============================
+function applyTheme(theme) {
+  body.classList.remove("theme-dark", "theme-light");
+  body.classList.add(`theme-${theme}`);
+  localStorage.setItem("theme", theme);
+
+  const icon = theme === "dark" ? "🌙" : "☀️";
+  document.querySelectorAll(".theme-toggle__icon").forEach((el) => {
+    el.textContent = icon;
+  });
+}
+
+(function initTheme() {
+  const stored = localStorage.getItem("theme");
+  const prefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const theme = stored || (prefersDark ? "dark" : "light");
+  applyTheme(theme);
+})();
+
+function toggleTheme() {
+  const isDark = body.classList.contains("theme-dark");
+  applyTheme(isDark ? "light" : "dark");
+}
+
+if (desktopThemeToggle) desktopThemeToggle.addEventListener("click", toggleTheme);
+if (mobileThemeToggle) mobileThemeToggle.addEventListener("click", toggleTheme);
+
+// ===============================
+// ANIMACIÓN DE REVEAL AL HACER SCROLL
+// ===============================
+if ("IntersectionObserver" in window && revealEls.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.18 }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add("is-visible"));
+}
+
+// ===============================
+// AÑO EN EL FOOTER
+// ===============================
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
+// ===============================
+// MODAL DE CONTACTO
+// ===============================
+function setModal(open) {
+  if (!contactModal) return;
+  contactModal.classList.toggle("is-open", open);
+}
+
+if (openModalBtn && contactModal) {
+  openModalBtn.addEventListener("click", () => setModal(true));
+}
+
+closeModalEls.forEach((el) => {
+  el.addEventListener("click", () => setModal(false));
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && contactModal?.classList.contains("is-open")) {
+    setModal(false);
+  }
+});
+
+// ===============================
+// COPIAR CORREO AL PORTAPAPELES
+// ===============================
+if (copyEmailBtn && copiedBadge) {
+  copyEmailBtn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
+      copiedBadge.setAttribute("aria-hidden", "false");
+      copiedBadge.classList.add("is-visible");
+
+      setTimeout(() => {
+        copiedBadge.classList.remove("is-visible");
+        copiedBadge.setAttribute("aria-hidden", "true");
+      }, 1800);
+    } catch (err) {
+      console.error("No se pudo copiar el correo", err);
+      alert("No se pudo copiar. Copia manualmente: " + CONTACT_EMAIL);
+    }
+  });
+}
+
+/// funcionalidad de el carrusel
+
+// ===============================
+// MODALES DE PROYECTOS + CARRUSEL
+// ===============================
+(function initProjectModals() {
+  const openButtons = document.querySelectorAll("[data-project-modal]");
+  const modals = document.querySelectorAll("[data-project-modal-root]");
+
+  if (!openButtons.length || !modals.length) return;
+
+  function openModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.classList.add("is-open");
+  }
+
+  function closeModal(modal) {
+    modal.classList.remove("is-open");
+  }
+
+  // Abrir
+  openButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-project-modal");
+      if (id) openModal(id);
+    });
+  });
+
+  // Cerrar
+  modals.forEach((modal) => {
+    modal.addEventListener("click", (e) => {
+      const target = e.target;
+      if (
+        target.matches("[data-close-project]") ||
+        target === modal.querySelector(".project-modal__overlay")
+      ) {
+        closeModal(modal);
+      }
+    });
+  });
+
+  // ESC
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      modals.forEach((m) => m.classList.remove("is-open"));
+    }
+  });
+})();
+
+// ===============================
+// CARRUSELES AUTO-PLAY
+// ===============================
+(function initCarousels() {
+  const carousels = document.querySelectorAll("[data-carousel]");
+  if (!carousels.length) return;
+
+  carousels.forEach((carousel) => {
+    const slides = Array.from(
+      carousel.querySelectorAll(".carousel__slide")
+    );
+    if (!slides.length) return;
+
+    const prevBtn = carousel.querySelector("[data-carousel-prev]");
+    const nextBtn = carousel.querySelector("[data-carousel-next]");
+    const dotsContainer = carousel.querySelector("[data-carousel-dots]");
+
+    let current = 0;
+    let intervalId = null;
+    const AUTO_TIME = 15000; // 15 segundos
+
+    // Crear dots
+    const dots = slides.map((_, idx) => {
+      const dot = document.createElement("button");
+      dot.className = "carousel__dot" + (idx === 0 ? " is-active" : "");
+      dot.setAttribute("type", "button");
+      dot.addEventListener("click", () => {
+        goTo(idx);
+        restartAuto();
+      });
+      dotsContainer && dotsContainer.appendChild(dot);
+      return dot;
+    });
+
+    function setActive(index) {
+      slides.forEach((s, i) => {
+        s.classList.toggle("is-active", i === index);
+      });
+      dots.forEach((d, i) => {
+        d.classList.toggle("is-active", i === index);
+      });
+    }
+
+    function goTo(index) {
+      if (!slides.length) return;
+      current = (index + slides.length) % slides.length;
+      setActive(current);
+    }
+
+    function next() {
+      goTo(current + 1);
+    }
+
+    function prev() {
+      goTo(current - 1);
+    }
+
+    function startAuto() {
+      if (intervalId) clearInterval(intervalId);
+      intervalId = setInterval(next, AUTO_TIME);
+    }
+
+    function restartAuto() {
+      startAuto();
+    }
+
+    // Controles
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        next();
+        restartAuto();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        prev();
+        restartAuto();
+      });
+    }
+
+    // Iniciar
+    setActive(0);
+    startAuto();
+  });
+})();
+
+    </script>
+
   </body>
 </html>
