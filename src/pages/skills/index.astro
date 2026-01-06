@@ -16,6 +16,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cf1fb60fea.js" crossorigin="anonymous"></script>
+
+  <!-- ESTILOS ESCENCIALES -->
+   <link rel="stylesheet" href="/escentials/header.css">
   </head>
 
   <body class="theme-dark">
@@ -196,7 +199,7 @@
       </section>
 
       <!-- SECCIÓN EXTRA: CÓMO TRABAJO -->
-      <section class="section section--alt">
+      <section class="page-hero">
         <div class="section__inner">
           <div class="section__header">
             <div>
@@ -235,122 +238,112 @@
         </div>
       </section>
 
-      <!-- CTA FINAL -->
-      <section class="section section--contact">
-        <div class="section__inner section__inner--narrow">
-          <h2 class="section__eyebrow">¿Te sirve este stack?</h2>
-          <p class="section__title">
-            Si encaja con lo que buscas, podemos crear algo juntos.
-          </p>
-          <p class="section__text section__text--center">
-            Ya sea para una landing, un pequeño producto o para reforzar un
-            equipo, puedo aportar desde el frontend y la experiencia de usuario.
-          </p>
-
-          <div class="contact-cta">
-            <div class="contact-cta__info">
-              <p class="contact-cta__eyebrow">Próximo paso</p>
-              <h3 class="contact-cta__title">
-                Te comparto mis datos para que me escribas cuando quieras.
-              </h3>
-              <p class="contact-cta__text">
-                Copias mi correo, revisas mis redes y si ves encaje, me
-                escribes. Simple.
-              </p>
-            </div>
-
-            <div class="contact-cta__actions">
-              <button
-                type="button"
-                id="open-contact-modal"
-                class="contact-cta__button"
-              >
-                <span>Ver datos de contacto</span>
-                <span class="contact-cta__icon">⚡</span>
-              </button>
-              <p class="contact-cta__hint">
-                Verás mi email (para copiar) y mis redes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- MODAL DE CONTACTO -->
-    <div class="modal" id="contact-modal" aria-hidden="true">
-      <div class="modal__overlay" data-close-modal></div>
-
-      <div
-        class="modal__panel"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="contact-modal-title"
-      >
-        <button
-          class="modal__close"
-          type="button"
-          aria-label="Cerrar"
-          data-close-modal
-        >
-          ✕
-        </button>
-
-        <p class="modal__eyebrow">Contacto directo</p>
-
-        <h3 class="modal__title" id="contact-modal-title">
-          Tienes una idea, la construimos.
+ 
+<!-- CONTACT -->
+<section id="contact" class="section section--contact reveal">
+  <div class="section__inner section__inner--narrow">
+    <h2 class="section__eyebrow">Contacto</h2> 
+    <!-- NUEVO CTA DE CONTACTO -->
+    <div class="contact-cta">
+      <div class="contact-cta__info">
+        <p class="contact-cta__eyebrow">Hablemos de tu idea</p>
+        <h3 class="contact-cta__title">
+          ¿Quieres lanzar, renovar o mejorar tu sitio?
         </h3>
-
-        <p class="modal__text">
-          Aquí tienes mis datos para que me escribas cuando quieras. Copia el
-          correo o abre la red que más uses.
+        <p class="contact-cta__text">
+          Te comparto mi correo y redes en un solo lugar para que elijas cómo
+          contactarme.
         </p>
+      </div>
 
-        <div class="modal__group">
-          <p class="modal__label">Email</p>
-
-          <button type="button" class="modal__email" id="copy-email-btn">
-            <span class="modal__email-value">samcubdev@gmail.com</span>
-            <span class="modal__email-copy">Copiar</span>
-          </button>
-
-          <span class="modal__copied" id="copied-badge" aria-hidden="true">
-            Correo copiado ✅
-          </span>
-        </div>
-
-        <div class="modal__group">
-          <p class="modal__label">Redes</p>
-
-          <div class="modal__socials">
-            <a
-              href="https://github.com/tuusuario"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-
-            <a
-              href="https://instagram.com/tuusuario"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
-
-            <a
-              href="https://linkedin.com/in/tuusuario"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
-            </a>
-          </div>
-        </div>
+      <div class="contact-cta__actions">
+        <button
+          type="button"
+          id="open-contact-modal"
+          class="btn btn--primary"
+        >
+          Ver datos de contacto
+        </button>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- MODAL DE CONTACTO -->
+<div class="modal" id="contact-modal" aria-hidden="true">
+  <div class="modal__overlay" data-close-modal></div>
+
+  <div
+    class="modal__panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contact-modal-title"
+  >
+    <!-- Botón cerrar -->
+    <button
+      class="modal__close"
+      type="button"
+      aria-label="Cerrar"
+      data-close-modal
+    >
+      ✕
+    </button>
+
+    <p class="modal__eyebrow">Contacto directo</p>
+
+    <h3 class="modal__title" id="contact-modal-title">
+      Tienes una idea, la construimos.
+    </h3>
+
+    <p class="modal__text">
+      Aquí tienes mis datos para que me escribas cuando quieras. Copia el correo
+      o abre la red que más uses y listo.
+    </p>
+
+    <!-- Email -->
+    <div class="modal__group">
+      <p class="modal__label">Email</p>
+
+      <button type="button" class="modal__email" id="copy-email-btn">
+        <span class="modal__email-value">samcubdev@gmail.com</span>
+        <span class="modal__email-copy">Copiar</span>
+      </button>
+
+      <span class="modal__copied" id="copied-badge" aria-hidden="true">
+        Correo copiado ✅
+      </span>
+    </div>
+
+    <!-- Redes -->
+    <div class="modal__group">
+      <p class="modal__label">Redes</p>
+
+      <div class="modal__socials">
+        <a
+          href="https://github.com/SamuelCubano"
+          target="_blank"
+          rel="noreferrer"
+        ><i class="fa-brands fa-github"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/samuelcubano/"
+          target="_blank"
+          rel="noreferrer"
+        ><i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/samuel-cubano-0b520b288/"
+          target="_blank"
+          rel="noreferrer"
+        ><i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -391,6 +384,7 @@
         © <span id="year"></span> Samuel Cubano
       </p>
     </footer>
+
 
         <script>
 // ===============================
