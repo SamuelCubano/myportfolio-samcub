@@ -561,7 +561,7 @@ main {
   box-shadow: var(--elevated-shadow);
   font-size: 0.9rem;
   transform-origin: center;
-  animation: float-soft 7s ease-in-out infinite;
+  animation: float-soft 5s ease-in-out infinite;
 }
 
 .hero__card-label {
