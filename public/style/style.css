@@ -9,6 +9,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -117,7 +118,8 @@ body.theme-light .site-header {
 }
 
 .nav__brand-text {
-  font-size: 0.7rem;
+  font-family: 'Jersey 10', sans-serif;
+  font-size: 1.3rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: #f9fafb;
@@ -299,7 +301,7 @@ body.nav-open .nav__toggle-line:nth-child(3) {
   z-index: 40;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s ease;
 }
 
 body.nav-open .mobile-menu {
@@ -496,13 +498,16 @@ main {
   font-size: 0.72rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(244, 114, 182, 0.9);
+  color: rgba(255, 0, 132, 0.9);
   margin-bottom: 0.8rem;
 }
 
+
+
 .hero__title {
+  font-family: 'Jersey 10', sans-serif;
   margin: 0;
-  font-size: 2rem;
+  font-size: 3rem;
   line-height: 1.25;
   color: var(--text-main);
 }
@@ -569,9 +574,16 @@ main {
 
 .hero__card-item {
   display: flex;
-  gap: 0.6rem;
-  margin-top: 0.6rem;
+  align-items: flex-start; /* IMPORTANTE: Mantiene el punto arriba */
+  gap: 0.8rem;             /* Un poco más de espacio suele verse mejor */
+  margin-top: 1.2rem;      /* Espaciado entre bloques */
   color: var(--text-main);
+}
+
+.hero__card-item p {
+  margin: 0;          /* Quita el margen por defecto de los párrafos */
+  line-height: 1.4;   /* Ajusta el interlineado para que sea legible */
+  color: var(--text-main);     /* O el color que prefieras */
 }
 
 /* DOTS */
@@ -1245,9 +1257,9 @@ body.theme-light .card:hover {
 }
 
 /* RESPONSIVE */
-@media (min-width: 640px) {
+@media (min-width: 900px) {
   .hero__title {
-    font-size: 2.3rem;
+    font-size: 4rem;
   }
 
   .hero {
@@ -1298,6 +1310,6 @@ body.theme-light .card:hover {
 
 @media (min-width: 1024px) {
   .hero__title {
-    font-size: 2.6rem;
+    font-size: 4rem;
   }
 }
