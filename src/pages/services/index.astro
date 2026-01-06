@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Servicios | Samuel Cubano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Servicios de desarrollo web de Samuel Cubano: landings que convierten, productos digitales y optimización de sitios existentes."
+    />
+    <link rel="stylesheet" href="/style/style-services.css" />
+    <link rel="stylesheet" href="/style/style.css">
+  </head>
+  <body>
+    <!-- HEADER / NAV -->
+    <header class="site-header">
+      <nav class="nav">
+        <a href="#hero" class="nav__brand">
+          <div class="nav__logo"></div>
+          <span class="nav__brand-text">Samuel Cubano</span>
+        </a>
+
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li><a href="/aboutme/">Sobre mí</a></li>
+            <li><a href="/skills/">Skills</a></li>
+            <li><a href="/projects/">Proyectos</a></li>
+            <li><a href="/services/">Servicios</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+
+          <!-- Toggle tema -->
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Cambiar tema"
+          >
+            <span class="theme-toggle__icon">🌙</span>
+          </button>
+
+          <a href="#contact" class="nav__cta">Hablemos</a>
+
+          <!-- Hamburguesa -->
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+          >
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- MENÚ MÓVIL -->
+      <div class="mobile-menu">
+        <div class="mobile-menu__overlay" data-close-menu></div>
+        <div class="mobile-menu__panel">
+          <div class="mobile-menu__top">
+            <span class="mobile-menu__title">Menú</span>
+            <button
+              class="mobile-menu__close"
+              type="button"
+              aria-label="Cerrar menú"
+              data-close-menu
+            >
+              ✕
+            </button>
+          </div>
+
+          <ul class="mobile-menu__links">
+            <li><a href="#about" data-close-menu>SOBRE MÍ</a></li>
+            <li><a href="#skills" data-close-menu>SKILLS</a></li>
+            <li><a href="#projects" data-close-menu>PROYECTOS</a></li>
+            <li><a href="#services" data-close-menu>SERVICIOS</a></li>
+            <li><a href="#contact" data-close-menu>CONTACTO</a></li>
+          </ul>
+
+          <div class="mobile-menu__bottom">
+            <button
+              class="theme-toggle theme-toggle--mobile"
+              type="button"
+              aria-label="Cambiar tema"
+            >
+              <span class="theme-toggle__icon">🌙</span>
+              <span class="theme-toggle__label">Modo oscuro / claro</span>
+            </button>
+
+            <a
+              href="#contact"
+              class="mobile-menu__cta"
+              data-close-menu
+            >
+              HABLEMOS
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- HERO SERVICIOS -->
+      <section class="page-hero">
+        <div class="page-hero__inner">
+          <div class="page-hero__badge">Servicios</div>
+          <h1 class="page-hero__title">
+            Qué puedo hacer por tu empresa
+            <span>desde el desarrollo web.</span>
+          </h1>
+          <p class="page-hero__text">
+            No ofrezco “una página web más”. Te ayudo a convertir tu sitio en
+            una herramienta real de negocio: que atraiga, explique y convierta,
+            sin perder el estilo ni romper la experiencia del usuario.
+          </p>
+
+          <div class="page-hero__tags">
+            <span>Estrategia + ejecución</span>
+            <span>Frontend</span>
+            <span>Resultados</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOQUES DE SERVICIOS PRINCIPALES -->
+      <section class="section section--alt">
+        <div class="section__inner">
+          <h2 class="section__eyebrow">Qué hacemos juntos</h2>
+          <p class="section__title">
+            Tres formas claras en las que puedo sumar a tu proyecto.
+          </p>
+
+          <div class="services-grid">
+            <!-- Servicio 1 -->
+            <article class="service-card">
+              <p class="service-card__label">01 · Web que vende</p>
+              <h3 class="service-card__title">
+                Landings y sitios pensados para convertir, no solo para “estar”.
+              </h3>
+              <p class="service-card__text">
+                Ideal si quieres lanzar un producto, un servicio o una marca y
+                necesitas una web que explique bien qué haces, por qué importas
+                y qué tiene que hacer el usuario después.
+              </p>
+              <ul class="service-card__list">
+                <li>Estructura clara orientada a objetivos (lead, venta, cita).</li>
+                <li>Mensaje directo, sin humo, alineado a tu propuesta de valor.</li>
+                <li>Diseño responsive, rápido y preparado para campañas.</li>
+              </ul>
+              <p class="service-card__foot">
+                Recomendado para: lanzamientos, SaaS, servicios profesionales,
+                marcas personales.
+              </p>
+            </article>
+
+            <!-- Servicio 2 -->
+            <article class="service-card">
+              <p class="service-card__label">02 · Producto digital / MVP</p>
+              <h3 class="service-card__title">
+                Llevamos tu idea a una versión real que se pueda usar y probar.
+              </h3>
+              <p class="service-card__text">
+                Si tienes una idea de app o producto, te ayudo a bajarla a una
+                versión funcional donde tus usuarios puedan probar el concepto
+                sin tener que invertir como si fuera la versión final.
+              </p>
+              <ul class="service-card__list">
+                <li>Definimos el flujo mínimo necesario (MVP, no mega app).</li>
+                <li>Interfaces claras, con foco en la experiencia base.</li>
+                <li>Estructura lista para iterar y escalar después.</li>
+              </ul>
+              <p class="service-card__foot">
+                Recomendado para: emprendedores, pequeñas empresas, pruebas de
+                concepto internas.
+              </p>
+            </article>
+
+            <!-- Servicio 3 -->
+            <article class="service-card">
+              <p class="service-card__label">03 · Optimización de sitio actual</p>
+              <h3 class="service-card__title">
+                Tomo lo que ya tienes y lo hago más claro, más rápido y más útil.
+              </h3>
+              <p class="service-card__text">
+                Si tu web ya existe pero no se entiende, no carga bien o no
+                convierte, la reviso con ojos frescos y la llevo a un siguiente
+                nivel sin tener que tirarla a la basura.
+              </p>
+              <ul class="service-card__list">
+                <li>Revisión de estructura, mensajes y llamadas a la acción.</li>
+                <li>Mejoras visuales y de performance (sin volverte loco).</li>
+                <li>Implementación de pequeños cambios con impacto real.</li>
+              </ul>
+              <p class="service-card__foot">
+                Recomendado para: webs desactualizadas, sitios “que no convierten”,
+                proyectos que quieren verse más profesionales.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CÓMO TRABAJO CON TU EMPRESA -->
+      <section class="section">
+        <div class="section__inner">
+          <div class="section__header">
+            <div>
+              <h2 class="section__eyebrow">Forma de trabajo</h2>
+              <p class="section__title">
+                Nada de procesos eternos: pasos claros, tiempos claros.
+              </p>
+            </div>
+          </div>
+
+          <div class="workflow-grid">
+            <article class="workflow-step">
+              <p class="workflow-step__badge">Paso 1</p>
+              <h3 class="workflow-step__title">Llamada corta / brief simple</h3>
+              <p class="workflow-step__text">
+                Me cuentas qué haces, qué necesitas lograr con la web y en qué
+                punto estás. Nada de documentos de 20 páginas: lo necesario para
+                entender bien el contexto.
+              </p>
+            </article>
+
+            <article class="workflow-step">
+              <p class="workflow-step__badge">Paso 2</p>
+              <h3 class="workflow-step__title">Estrategia de página + estructura</h3>
+              <p class="workflow-step__text">
+                Defino qué secciones tiene sentido incluir, qué mensajes deben ir
+                en cada parte y cuál será el recorrido del usuario para que tenga
+                claro el siguiente paso.
+              </p>
+            </article>
+
+            <article class="workflow-step">
+              <p class="workflow-step__badge">Paso 3</p>
+              <h3 class="workflow-step__title">Diseño, desarrollo y ajustes</h3>
+              <p class="workflow-step__text">
+                Maqueto, conecto la lógica necesaria y hacemos una ronda de
+                ajustes fina para dejar la web lista para usar, mostrar o lanzar
+                campañas.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARA QUIÉN ES / PARA QUIÉN NO -->
+      <section class="section section--alt">
+        <div class="section__inner">
+          <div class="section__header">
+            <div>
+              <h2 class="section__eyebrow">¿Encaja contigo?</h2>
+              <p class="section__title">
+                Para quién tiene sentido trabajar conmigo (y para quién no).
+              </p>
+            </div>
+          </div>
+
+          <div class="fit-grid">
+            <article class="fit-card fit-card--yes">
+              <p class="fit-card__label">Es para ti si…</p>
+              <ul class="fit-card__list">
+                <li>
+                  Tienes claro que tu web debe ayudar a vender o conseguir
+                  clientes, no solo “existir”.
+                </li>
+                <li>
+                  Valorás el orden, la claridad y una comunicación directa sobre
+                  el proyecto.
+                </li>
+                <li>
+                  Estás dispuesto a compartir información real de tu negocio para
+                  que el sitio tenga sentido.
+                </li>
+                <li>
+                  Prefieres un proceso ágil, con entregas concretas y sin
+                  reuniones inútiles.
+                </li>
+              </ul>
+            </article>
+
+            <article class="fit-card fit-card--no">
+              <p class="fit-card__label">No es para ti si…</p>
+              <ul class="fit-card__list">
+                <li>
+                  Solo quieres “algo barato y rápido” sin pensar en el objetivo
+                  de la web.
+                </li>
+                <li>
+                  Buscas una mega agencia con 10 áreas involucradas en cada
+                  decisión.
+                </li>
+                <li>
+                  Cambias la idea cada dos días y no puedes comprometerte con una
+                  dirección.
+                </li>
+                <li>
+                  No estás dispuesto a darle contenido o feedback mínimo al
+                  proyecto.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ CORTO -->
+      <section class="section">
+        <div class="section__inner">
+          <div class="section__header">
+            <div>
+              <h2 class="section__eyebrow">Preguntas rápidas</h2>
+              <p class="section__title">
+                Cosas que suelen preguntarme antes de empezar.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <details class="faq-item">
+              <summary class="faq-item__summary">
+                ¿Cuánto tarda en estar lista una web?
+              </summary>
+              <p class="faq-item__text">
+                Depende del alcance, pero una landing bien enfocada suele estar
+                entre 1 y 3 semanas, considerando tiempos de feedback y cierre de
+                contenidos.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__summary">
+                ¿Trabajas solo o con más gente?
+              </summary>
+              <p class="faq-item__text">
+                Yo llevo el desarrollo y la parte de experiencia. Si hace falta
+                algo extra (branding, copy más profundo, etc.), puedo coordinar
+                con otros perfiles o trabajar con tu equipo.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__summary">
+                ¿Puedes integrarte con mi equipo actual?
+              </summary>
+              <p class="faq-item__text">
+                Sí. Puedo trabajar como apoyo puntual para levantar la web o
+                integrarme como refuerzo de frontend en un proyecto concreto.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="section section--contact">
+        <div class="section__inner section__inner--narrow">
+          <h2 class="section__eyebrow">Si te hizo sentido, hablamos</h2>
+          <p class="section__title">
+            No hace falta tener todo perfecto: empezamos con una conversación
+            corta.
+          </p>
+          <p class="section__text section__text--center">
+            Me cuentas en qué punto está tu empresa, qué quieres lograr con la
+            web y vemos si tiene sentido trabajar juntos. Si sí, armamos algo
+            concreto. Si no, al menos te llevas claridad.
+          </p>
+
+          <div class="contact-cta">
+            <div class="contact-cta__info">
+              <p class="contact-cta__eyebrow">Próximo paso</p>
+              <h3 class="contact-cta__title">
+                Te comparto mis datos para que me contactes cuando quieras.
+              </h3>
+              <p class="contact-cta__text">
+                Copias mi correo, revisas mis redes y si ves encaje, me
+                escribes. Simple.
+              </p>
+            </div>
+
+            <div class="contact-cta__actions">
+              <button
+                type="button"
+                id="open-contact-modal"
+                class="contact-cta__button"
+              >
+                <span>Ver datos de contacto</span>
+                <span class="contact-cta__icon">⚡</span>
+              </button>
+              <p class="contact-cta__hint">
+                Verás mi email (para copiar) y mis redes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- MODAL CONTACTO (MISMO COMPORTAMIENTO) -->
+    <div class="modal" id="contact-modal" aria-hidden="true">
+      <div class="modal__overlay" data-close-modal></div>
+
+      <div
+        class="modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-modal-title"
+      >
+        <button
+          class="modal__close"
+          type="button"
+          aria-label="Cerrar"
+          data-close-modal
+        >
+          ✕
+        </button>
+
+        <p class="modal__eyebrow">Contacto directo</p>
+
+        <h3 class="modal__title" id="contact-modal-title">
+          Tienes una idea, la construimos.
+        </h3>
+
+        <p class="modal__text">
+          Aquí tienes mis datos para que me escribas cuando quieras. Copia el
+          correo o abre la red que más uses.
+        </p>
+
+        <div class="modal__group">
+          <p class="modal__label">Email</p>
+
+          <button type="button" class="modal__email" id="copy-email-btn">
+            <span class="modal__email-value">samcubdev@gmail.com</span>
+            <span class="modal__email-copy">Copiar</span>
+          </button>
+
+          <span class="modal__copied" id="copied-badge" aria-hidden="true">
+            Correo copiado ✅
+          </span>
+        </div>
+
+        <div class="modal__group">
+          <p class="modal__label">Redes</p>
+
+          <div class="modal__socials">
+            <a
+              href="https://github.com/tuusuario"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://instagram.com/tuusuario"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="https://linkedin.com/in/tuusuario"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__name">Samuel Cubano</span>
+          <span class="footer__role">Desarrollador Web</span>
+        </div>
+
+        <div class="footer__links">
+          <a href="/index.html#hero">Inicio</a>
+          <a href="/about.html">Sobre mí</a>
+          <a href="/skills.html">Skills</a>
+          <a href="/projects.html">Proyectos</a>
+          <a href="/services.html">Servicios</a>
+        </div>
+
+        <div class="footer__social">
+          <a
+            href="https://github.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="GitHub"
+          >
+            GH
+          </a>
+          <a
+            href="https://instagram.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="Instagram"
+          >
+            IG
+          </a>
+          <a
+            href="https://linkedin.com/in/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="LinkedIn"
+          >
+            IN
+          </a>
+        </div>
+      </div>
+      <p class="footer__copy">
+        © <span id="year"></span> Samuel Cubano. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script>
+// ===============================
+// SELECTORES GENERALES
+// ===============================
+const body = document.body;
+const toggleBtn = document.querySelector(".nav__toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeTriggers = document.querySelectorAll("[data-close-menu]");
+const desktopThemeToggle = document.querySelector(".theme-toggle");
+const mobileThemeToggle = document.querySelector(".theme-toggle--mobile");
+const yearSpan = document.getElementById("year");
+const revealEls = document.querySelectorAll(".reveal");
+
+// Modal contacto
+const contactModal = document.getElementById("contact-modal");
+const openModalBtn = document.getElementById("open-contact-modal");
+const closeModalEls = document.querySelectorAll("[data-close-modal]");
+const copyEmailBtn = document.getElementById("copy-email-btn");
+const copiedBadge = document.getElementById("copied-badge");
+const CONTACT_EMAIL = "samcubdev@gmail.com";
+
+// ===============================
+// NAV / MENÚ MÓVIL
+// ===============================
+function setMenu(open) {
+  if (!toggleBtn || !mobileMenu) return;
+  body.classList.toggle("nav-open", open);
+  toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
+}
+
+if (toggleBtn && mobileMenu) {
+  let isOpen = false;
+
+  toggleBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    setMenu(isOpen);
+  });
+
+  closeTriggers.forEach((el) => {
+    el.addEventListener("click", () => {
+      isOpen = false;
+      setMenu(false);
+    });
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen) {
+      isOpen = false;
+      setMenu(false);
+    }
+  });
+}
+
+// ===============================
+// TEMA OSCURO / CLARO
+// ===============================
+function applyTheme(theme) {
+  body.classList.remove("theme-dark", "theme-light");
+  body.classList.add(`theme-${theme}`);
+  localStorage.setItem("theme", theme);
+
+  const icon = theme === "dark" ? "🌙" : "☀️";
+  document.querySelectorAll(".theme-toggle__icon").forEach((el) => {
+    el.textContent = icon;
+  });
+}
+
+(function initTheme() {
+  const stored = localStorage.getItem("theme");
+  const prefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const theme = stored || (prefersDark ? "dark" : "light");
+  applyTheme(theme);
+})();
+
+function toggleTheme() {
+  const isDark = body.classList.contains("theme-dark");
+  applyTheme(isDark ? "light" : "dark");
+}
+
+if (desktopThemeToggle) desktopThemeToggle.addEventListener("click", toggleTheme);
+if (mobileThemeToggle) mobileThemeToggle.addEventListener("click", toggleTheme);
+
+// ===============================
+// ANIMACIÓN DE REVEAL AL HACER SCROLL
+// ===============================
+if ("IntersectionObserver" in window && revealEls.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.18 }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add("is-visible"));
+}
+
+// ===============================
+// AÑO EN EL FOOTER
+// ===============================
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
+// ===============================
+// MODAL DE CONTACTO
+// ===============================
+function setModal(open) {
+  if (!contactModal) return;
+  contactModal.classList.toggle("is-open", open);
+}
+
+if (openModalBtn && contactModal) {
+  openModalBtn.addEventListener("click", () => setModal(true));
+}
+
+closeModalEls.forEach((el) => {
+  el.addEventListener("click", () => setModal(false));
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && contactModal?.classList.contains("is-open")) {
+    setModal(false);
+  }
+});
+
+// ===============================
+// COPIAR CORREO AL PORTAPAPELES
+// ===============================
+if (copyEmailBtn && copiedBadge) {
+  copyEmailBtn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
+      copiedBadge.setAttribute("aria-hidden", "false");
+      copiedBadge.classList.add("is-visible");
+
+      setTimeout(() => {
+        copiedBadge.classList.remove("is-visible");
+        copiedBadge.setAttribute("aria-hidden", "true");
+      }, 1800);
+    } catch (err) {
+      console.error("No se pudo copiar el correo", err);
+      alert("No se pudo copiar. Copia manualmente: " + CONTACT_EMAIL);
+    }
+  });
+}
+
+</script>
+  </body>
+</html>
