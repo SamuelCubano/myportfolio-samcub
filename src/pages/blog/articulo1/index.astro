@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cómo estructuro un proyecto frontend desde cero | Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Artículo de blog sobre cómo estructurar un proyecto frontend desde cero, pensando en claridad, escalabilidad y mantenibilidad."
+    />
+    <link rel="stylesheet" href="/style/style-articles/style-blog-post.css" />
+    <link rel="stylesheet" href="/style/style.css">
+  </head>
+  <body class="theme-dark">
+    <!-- HEADER / NAV -->
+    <header class="site-header">
+      <nav class="nav">
+        <a href="#hero" class="nav__brand">
+          <div class="nav__logo"></div>
+          <span class="nav__brand-text">Samuel Cubano</span>
+        </a>
+
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li><a href="/aboutme/">Sobre mí</a></li>
+            <li><a href="/skills/">Skills</a></li>
+            <li><a href="/projects/">Proyectos</a></li>
+            <li><a href="/services/">Servicios</a></li>
+            <li><a href="/contact/">Contacto</a></li>
+          </ul>
+
+          <!-- Toggle tema -->
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Cambiar tema"
+          >
+            <span class="theme-toggle__icon">🌙</span>
+          </button>
+
+          <a href="#contact" class="nav__cta">Hablemos</a>
+
+          <!-- Hamburguesa -->
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+          >
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- MENÚ MÓVIL -->
+      <div class="mobile-menu">
+        <div class="mobile-menu__overlay" data-close-menu></div>
+        <div class="mobile-menu__panel">
+          <div class="mobile-menu__top">
+            <span class="mobile-menu__title">Menú</span>
+            <button
+              class="mobile-menu__close"
+              type="button"
+              aria-label="Cerrar menú"
+              data-close-menu
+            >
+              ✕
+            </button>
+          </div>
+
+          <ul class="mobile-menu__links">
+            <li><a href="#about" data-close-menu>SOBRE MÍ</a></li>
+            <li><a href="#skills" data-close-menu>SKILLS</a></li>
+            <li><a href="#projects" data-close-menu>PROYECTOS</a></li>
+            <li><a href="#services" data-close-menu>SERVICIOS</a></li>
+            <li><a href="#contact" data-close-menu>CONTACTO</a></li>
+          </ul>
+
+          <div class="mobile-menu__bottom">
+            <button
+              class="theme-toggle theme-toggle--mobile"
+              type="button"
+              aria-label="Cambiar tema"
+            >
+              <span class="theme-toggle__icon">🌙</span>
+              <span class="theme-toggle__label">Modo oscuro / claro</span>
+            </button>
+
+            <a
+              href="#contact"
+              class="mobile-menu__cta"
+              data-close-menu
+            >
+              HABLEMOS
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO DEL ARTÍCULO -->
+      <section class="article-hero">
+        <div class="article-hero__inner">
+          <a href="/blog.html" class="article-hero__back">← Volver al blog</a>
+
+          <p class="article-hero__tag">Frontend</p>
+
+          <h1 class="article-hero__title">
+            Cómo estructuro un proyecto frontend desde cero
+          </h1>
+
+          <p class="article-hero__meta">
+            <span>Publicado el 12 Ene 2026</span> ·
+            <span>Lectura ~6 min</span>
+          </p>
+
+          <p class="article-hero__summary">
+            No se trata de inventar la rueda, sino de tener una base clara que
+            te permita crecer sin que el proyecto se sienta pesado o desordenado
+            a la tercera funcionalidad.
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTENIDO DEL ARTÍCULO -->
+      <article class="article">
+        <div class="article__inner">
+          <!-- Imagen principal -->
+          <figure class="article__cover">
+            <img
+              src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg"
+              alt="Pantallas con código en un setup de desarrollador"
+            />
+            <figcaption>
+              Tener una estructura clara desde el inicio te ahorra muchos
+              dolores de cabeza después.
+            </figcaption>
+          </figure>
+
+          <!-- Contenido de ejemplo -->
+          <p>
+            Cuando arranco un proyecto frontend nuevo, no empiezo abriendo
+            archivos a lo loco. Primero pienso en
+            <strong>qué va a vivir dónde</strong> y cómo quiero que se sienta
+            trabajar dentro de esa carpeta en un par de semanas.
+          </p>
+
+          <h2>1. Estructura base de carpetas</h2>
+          <p>
+            La idea no es hacer una arquitectura enterprise para un proyecto
+            pequeño, pero sí separar lo mínimo para no tener un solo archivo
+            gigante. Algo así suele ser suficiente para empezar:
+          </p>
+
+          <pre class="article__code">
+/src
+  /components
+  /pages
+  /styles
+  /assets
+  /lib
+          </pre>
+
+          <p>
+            Con esto ya sé que los componentes viven en un lugar, las páginas en
+            otro y que no voy a mezclar imágenes con lógica ni estilos.
+          </p>
+
+          <h2>2. Pensar en componentes desde el día uno</h2>
+          <p>
+            Incluso si el proyecto es pequeño, dividir en componentes me permite
+            reusar secciones y cambiar cosas en un solo sitio. Un header, una
+            card, un botón… todo eso se repite más de lo que creemos.
+          </p>
+
+          <h2>3. Reglas simples para no romper el proyecto</h2>
+          <ul>
+            <li>No meter lógica enorme dentro de un solo componente.</li>
+            <li>Nombrar las cosas con intención, no con “final2_def” vibes.</li>
+            <li>
+              Dejar comentarios solo cuando algo no es obvio, no para narrar el
+              código.
+            </li>
+          </ul>
+
+          <p>
+            Al final, lo que busco no es que el proyecto sea perfecto, sino que
+            <strong>cualquier persona (incluido yo en 3 meses)</strong> pueda
+            entrar y entender qué está pasando sin sufrir.
+          </p>
+
+          <!-- CTA final -->
+          <div class="article-cta">
+            <p class="article-cta__text">
+              ¿Te gustaría que pensemos juntos la estructura de tu proyecto o
+              portafolio?
+            </p>
+            <a href="/contact.html" class="article-cta__button">
+              Hablemos de tu próximo proyecto →
+            </a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__name">Samuel Cubano</span>
+          <span class="footer__role">Desarrollador Web</span>
+        </div>
+
+        <div class="footer__links">
+          <a href="/index.html#hero">Inicio</a>
+          <a href="/about.html">Sobre mí</a>
+          <a href="/skills.html">Skills</a>
+          <a href="/projects.html">Proyectos</a>
+          <a href="/services.html">Servicios</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contacto</a>
+        </div>
+
+        <div class="footer__social">
+          <a
+            href="https://github.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="GitHub"
+          >
+            GH
+          </a>
+          <a
+            href="https://instagram.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="Instagram"
+          >
+            IG
+          </a>
+          <a
+            href="https://linkedin.com/in/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="LinkedIn"
+          >
+            IN
+          </a>
+        </div>
+      </div>
+      <p class="footer__copy">
+        © <span id="year"></span> Samuel Cubano. Todos los derechos reservados.
+      </p>
+    </footer>
+
+        <script>
+// ===============================
+// SELECTORES GENERALES
+// ===============================
+const body = document.body;
+const toggleBtn = document.querySelector(".nav__toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeTriggers = document.querySelectorAll("[data-close-menu]");
+const desktopThemeToggle = document.querySelector(".theme-toggle");
+const mobileThemeToggle = document.querySelector(".theme-toggle--mobile");
+const yearSpan = document.getElementById("year");
+const revealEls = document.querySelectorAll(".reveal");
+
+// Modal contacto
+const contactModal = document.getElementById("contact-modal");
+const openModalBtn = document.getElementById("open-contact-modal");
+const closeModalEls = document.querySelectorAll("[data-close-modal]");
+const copyEmailBtn = document.getElementById("copy-email-btn");
+const copiedBadge = document.getElementById("copied-badge");
+const CONTACT_EMAIL = "samcubdev@gmail.com";
+
+// ===============================
+// NAV / MENÚ MÓVIL
+// ===============================
+function setMenu(open) {
+  if (!toggleBtn || !mobileMenu) return;
+  body.classList.toggle("nav-open", open);
+  toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
+}
+
+if (toggleBtn && mobileMenu) {
+  let isOpen = false;
+
+  toggleBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    setMenu(isOpen);
+  });
+
+  closeTriggers.forEach((el) => {
+    el.addEventListener("click", () => {
+      isOpen = false;
+      setMenu(false);
+    });
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen) {
+      isOpen = false;
+      setMenu(false);
+    }
+  });
+}
+
+// ===============================
+// TEMA OSCURO / CLARO
+// ===============================
+function applyTheme(theme) {
+  body.classList.remove("theme-dark", "theme-light");
+  body.classList.add(`theme-${theme}`);
+  localStorage.setItem("theme", theme);
+
+  const icon = theme === "dark" ? "🌙" : "☀️";
+  document.querySelectorAll(".theme-toggle__icon").forEach((el) => {
+    el.textContent = icon;
+  });
+}
+
+(function initTheme() {
+  const stored = localStorage.getItem("theme");
+  const prefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const theme = stored || (prefersDark ? "dark" : "light");
+  applyTheme(theme);
+})();
+
+function toggleTheme() {
+  const isDark = body.classList.contains("theme-dark");
+  applyTheme(isDark ? "light" : "dark");
+}
+
+if (desktopThemeToggle) desktopThemeToggle.addEventListener("click", toggleTheme);
+if (mobileThemeToggle) mobileThemeToggle.addEventListener("click", toggleTheme);
+
+// ===============================
+// ANIMACIÓN DE REVEAL AL HACER SCROLL
+// ===============================
+if ("IntersectionObserver" in window && revealEls.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.18 }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add("is-visible"));
+}
+
+// ===============================
+// AÑO EN EL FOOTER
+// ===============================
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
+// ===============================
+// MODAL DE CONTACTO
+// ===============================
+function setModal(open) {
+  if (!contactModal) return;
+  contactModal.classList.toggle("is-open", open);
+}
+
+if (openModalBtn && contactModal) {
+  openModalBtn.addEventListener("click", () => setModal(true));
+}
+
+closeModalEls.forEach((el) => {
+  el.addEventListener("click", () => setModal(false));
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && contactModal?.classList.contains("is-open")) {
+    setModal(false);
+  }
+});
+
+// ===============================
+// COPIAR CORREO AL PORTAPAPELES
+// ===============================
+if (copyEmailBtn && copiedBadge) {
+  copyEmailBtn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
+      copiedBadge.setAttribute("aria-hidden", "false");
+      copiedBadge.classList.add("is-visible");
+
+      setTimeout(() => {
+        copiedBadge.classList.remove("is-visible");
+        copiedBadge.setAttribute("aria-hidden", "true");
+      }, 1800);
+    } catch (err) {
+      console.error("No se pudo copiar el correo", err);
+      alert("No se pudo copiar. Copia manualmente: " + CONTACT_EMAIL);
+    }
+  });
+}
+
+</script>
+  </body>
+</html>

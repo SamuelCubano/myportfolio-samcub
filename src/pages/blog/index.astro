@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blog | Samuel Cubano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Blog de Samuel Cubano. Artículos sobre desarrollo web, frontend, CSS, JavaScript y programación."
+    />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/style-blog.css" />">
+
+  </head>
+  <body>
+    <!-- HEADER / NAV -->
+    <header class="site-header">
+      <nav class="nav">
+        <a href="/index.html#hero" class="nav__brand">
+          <span class="nav__brand-text">Samuel Cubano</span>
+        </a>
+
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li><a href="/index.html#hero">Inicio</a></li>
+            <li><a href="/about.html">Sobre mí</a></li>
+            <li><a href="/skills.html">Skills</a></li>
+            <li><a href="/projects.html">Proyectos</a></li>
+            <li><a href="/services.html">Servicios</a></li>
+            <li><a href="/blog.html" class="nav__link--active">Blog</a></li>
+            <li><a href="/contact.html">Contacto</a></li>
+          </ul>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Cambiar tema"
+          >
+            <span class="theme-toggle__icon">🌙</span>
+          </button>
+
+          <a href="/contact.html" class="nav__cta">Hablemos</a>
+
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+          >
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- MENÚ MÓVIL -->
+      <div class="mobile-menu">
+        <div class="mobile-menu__overlay" data-close-menu></div>
+        <div class="mobile-menu__panel">
+          <div class="mobile-menu__top">
+            <span class="mobile-menu__title">Menú</span>
+            <button
+              class="mobile-menu__close"
+              type="button"
+              aria-label="Cerrar menú"
+              data-close-menu
+            >
+              ✕
+            </button>
+          </div>
+
+          <ul class="mobile-menu__links">
+            <li><a href="/index.html#hero" data-close-menu>INICIO</a></li>
+            <li><a href="/about.html" data-close-menu>SOBRE MÍ</a></li>
+            <li><a href="/skills.html" data-close-menu>SKILLS</a></li>
+            <li><a href="/projects.html" data-close-menu>PROYECTOS</a></li>
+            <li><a href="/services.html" data-close-menu>SERVICIOS</a></li>
+            <li>
+              <a
+                href="/blog.html"
+                data-close-menu
+                class="nav__link--active"
+                >BLOG</a
+              >
+            </li>
+            <li><a href="/contact.html" data-close-menu>CONTACTO</a></li>
+          </ul>
+
+          <div class="mobile-menu__bottom">
+            <button
+              class="theme-toggle theme-toggle--mobile"
+              type="button"
+              aria-label="Cambiar tema"
+            >
+              <span class="theme-toggle__icon">🌙</span>
+              <span class="theme-toggle__label">Modo oscuro / claro</span>
+            </button>
+
+            <a
+              href="/contact.html"
+              class="mobile-menu__cta"
+              data-close-menu
+            >
+              HABLEMOS
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO BLOG -->
+      <section class="page-hero">
+        <div class="page-hero__inner">
+          <div class="page-hero__badge">Blog</div>
+          <h1 class="page-hero__title">
+            Artículos de desarrollo web y programación.
+            <span>Notas, ideas y cosas que voy aprendiendo en el camino.</span>
+          </h1>
+          <p class="page-hero__text">
+            Aquí guardo lo que voy descubriendo construyendo proyectos reales:
+            frontend, CSS, JS, buenas prácticas y algo de filosofía dev.
+          </p>
+
+          <div class="page-hero__tags">
+            <span>HTML · CSS · JS</span>
+            <span>Frontend</span>
+            <span>Tips prácticos</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTROLES + GRID -->
+      <section class="section section--alt">
+        <div class="section__inner">
+          <div class="section__header">
+            <h2 class="section__eyebrow">Explora el contenido</h2>
+            <p class="section__title">
+              Filtra por fecha, tema o busca algo específico.
+            </p>
+          </div>
+
+          <!-- CONTROLES -->
+          <div class="blog-controls">
+            <!-- Buscador -->
+            <div class="blog-controls__search">
+              <label for="blog-search" class="blog-controls__label">
+                Buscar
+              </label>
+              <div class="blog-search">
+                <span class="blog-search__icon">🔍</span>
+                <input
+                  type="text"
+                  id="blog-search"
+                  class="blog-search__input"
+                  placeholder="Escribe una palabra del título o tema (ej: frontend, responsive, portafolio)"
+                />
+              </div>
+            </div>
+
+            <!-- Filtros -->
+            <div class="blog-controls__filters">
+              <div class="blog-filter">
+                <label for="filter-year" class="blog-controls__label">
+                  Año
+                </label>
+                <select id="filter-year" class="blog-filter__select">
+                  <option value="all">Todos</option>
+                  <option value="2026">2026</option>
+                  <option value="2025">2025</option>
+                </select>
+              </div>
+
+              <div class="blog-filter">
+                <label for="filter-month" class="blog-controls__label">
+                  Mes
+                </label>
+                <select id="filter-month" class="blog-filter__select">
+                  <option value="all">Todos</option>
+                  <option value="01">Enero</option>
+                  <option value="02">Febrero</option>
+                  <option value="03">Marzo</option>
+                  <option value="04">Abril</option>
+                  <option value="05">Mayo</option>
+                  <option value="06">Junio</option>
+                  <option value="07">Julio</option>
+                  <option value="08">Agosto</option>
+                  <option value="09">Septiembre</option>
+                  <option value="10">Octubre</option>
+                  <option value="11">Noviembre</option>
+                  <option value="12">Diciembre</option>
+                </select>
+              </div>
+
+              <div class="blog-filter blog-filter--tags">
+                <span class="blog-controls__label">Tag</span>
+                <div class="blog-tags">
+                  <button
+                    class="tag-chip tag-chip--active"
+                    data-tag="all"
+                    type="button"
+                  >
+                    Todos
+                  </button>
+                  <button
+                    class="tag-chip"
+                    data-tag="frontend"
+                    type="button"
+                  >
+                    Frontend
+                  </button>
+                  <button class="tag-chip" data-tag="css" type="button">
+                    CSS
+                  </button>
+                  <button class="tag-chip" data-tag="javascript" type="button">
+                    JavaScript
+                  </button>
+                  <button class="tag-chip" data-tag="buenas-practicas" type="button">
+                    Buenas prácticas
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MENSAJE SIN RESULTADOS -->
+          <div id="blog-empty" class="blog-empty" hidden>
+            <p class="blog-empty__title">No encontré nada con ese filtro.</p>
+            <p class="blog-empty__text">
+              Prueba con otra palabra, quita algún filtro de fecha o elige
+              “Todos” en tags. A veces la idea está, solo hay que buscarla
+              distinto.
+            </p>
+          </div>
+
+          <!-- GRID DE ARTÍCULOS -->
+          <div class="blog-grid" id="blog-grid">
+            <!-- Artículo 1 -->
+            <article
+              class="blog-card"
+              data-year="2026"
+              data-month="01"
+              data-tags="frontend,estructura,proyecto"
+              data-title="Cómo estructuro un proyecto frontend desde cero"
+            >
+              <a
+                href="/blog/estructura-proyecto-frontend.html"
+                class="blog-card__link"
+              >
+                <div class="blog-card__thumb blog-card__thumb--one"></div>
+
+                <div class="blog-card__body">
+                  <p class="blog-card__meta">
+                    <span class="blog-card__date">12 Ene 2026</span>
+                    <span class="blog-card__tag">Frontend</span>
+                  </p>
+
+                  <h3 class="blog-card__title">
+                    Cómo estructuro un proyecto frontend desde cero
+                  </h3>
+
+                  <p class="blog-card__excerpt">
+                    Carpetas, componentes, estilos y pequeños trucos para que un
+                    proyecto no se vuelva un caos a la tercera semana.
+                  </p>
+
+                  <div class="blog-card__tagsline">
+                    <span>#frontend</span>
+                    <span>#arquitectura</span>
+                    <span>#proyectos</span>
+                  </div>
+
+                  <div class="blog-card__footer">
+                    <span class="blog-card__readtime">
+                      Lectura corta · ~6 min
+                    </span>
+                    <span class="blog-card__cta">Leer artículo →</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Artículo 2 -->
+            <article
+              class="blog-card"
+              data-year="2026"
+              data-month="01"
+              data-tags="css,responsive,frontend"
+              data-title="Responsive sin drama: cómo pienso el diseño móvil primero"
+            >
+              <a href="/blog/responsive-sin-drama.html" class="blog-card__link">
+                <div class="blog-card__thumb blog-card__thumb--two"></div>
+
+                <div class="blog-card__body">
+                  <p class="blog-card__meta">
+                    <span class="blog-card__date">05 Ene 2026</span>
+                    <span class="blog-card__tag">CSS</span>
+                  </p>
+
+                  <h3 class="blog-card__title">
+                    Responsive sin drama: cómo pienso el diseño móvil primero
+                  </h3>
+
+                  <p class="blog-card__excerpt">
+                    En vez de pelearte con media queries al final, te cuento cómo
+                    parto de mobile y voy subiendo sin perder el control.
+                  </p>
+
+                  <div class="blog-card__tagsline">
+                    <span>#css</span>
+                    <span>#responsive</span>
+                    <span>#frontend</span>
+                  </div>
+
+                  <div class="blog-card__footer">
+                    <span class="blog-card__readtime">~5 min</span>
+                    <span class="blog-card__cta">Leer artículo →</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Artículo 3 -->
+            <article
+              class="blog-card"
+              data-year="2025"
+              data-month="12"
+              data-tags="buenas-practicas,portafolio,frontend"
+              data-title="Errores que cometí haciendo portafolios (y que tú puedes evitar)"
+            >
+              <a
+                href="/blog/errores-portafolio-dev.html"
+                class="blog-card__link"
+              >
+                <div class="blog-card__thumb blog-card__thumb--three"></div>
+
+                <div class="blog-card__body">
+                  <p class="blog-card__meta">
+                    <span class="blog-card__date">22 Dic 2025</span>
+                    <span class="blog-card__tag">Buenas prácticas</span>
+                  </p>
+
+                  <h3 class="blog-card__title">
+                    Errores que cometí haciendo portafolios (y que tú puedes evitar)
+                  </h3>
+
+                  <p class="blog-card__excerpt">
+                    Cosas que parecen pequeñas pero hacen que un reclutador o
+                    cliente cierre la pestaña sin pensarlo mucho.
+                  </p>
+
+                  <div class="blog-card__tagsline">
+                    <span>#buenas-practicas</span>
+                    <span>#portafolio</span>
+                    <span>#frontend</span>
+                  </div>
+
+                  <div class="blog-card__footer">
+                    <span class="blog-card__readtime">~7 min</span>
+                    <span class="blog-card__cta">Leer artículo →</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__name">Samuel Cubano</span>
+          <span class="footer__role">Desarrollador Web</span>
+        </div>
+
+        <div class="footer__links">
+          <a href="/index.html#hero">Inicio</a>
+          <a href="/about.html">Sobre mí</a>
+          <a href="/skills.html">Skills</a>
+          <a href="/projects.html">Proyectos</a>
+          <a href="/services.html">Servicios</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contacto</a>
+        </div>
+
+        <div class="footer__social">
+          <a
+            href="https://github.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="GitHub"
+          >
+            GH
+          </a>
+          <a
+            href="https://instagram.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="Instagram"
+          >
+            IG
+          </a>
+          <a
+            href="https://linkedin.com/in/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="LinkedIn"
+          >
+            IN
+          </a>
+        </div>
+      </div>
+      <p class="footer__copy">
+        © <span id="year"></span> Samuel Cubano. Todos los derechos reservados.
+      </p>
+    </footer>
+
+        <script>
+// ===============================
+// SELECTORES GENERALES
+// ===============================
+const body = document.body;
+const toggleBtn = document.querySelector(".nav__toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeTriggers = document.querySelectorAll("[data-close-menu]");
+const desktopThemeToggle = document.querySelector(".theme-toggle");
+const mobileThemeToggle = document.querySelector(".theme-toggle--mobile");
+const yearSpan = document.getElementById("year");
+const revealEls = document.querySelectorAll(".reveal");
+
+// Modal contacto
+const contactModal = document.getElementById("contact-modal");
+const openModalBtn = document.getElementById("open-contact-modal");
+const closeModalEls = document.querySelectorAll("[data-close-modal]");
+const copyEmailBtn = document.getElementById("copy-email-btn");
+const copiedBadge = document.getElementById("copied-badge");
+const CONTACT_EMAIL = "samcubdev@gmail.com";
+
+// ===============================
+// NAV / MENÚ MÓVIL
+// ===============================
+function setMenu(open) {
+  if (!toggleBtn || !mobileMenu) return;
+  body.classList.toggle("nav-open", open);
+  toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
+}
+
+if (toggleBtn && mobileMenu) {
+  let isOpen = false;
+
+  toggleBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    setMenu(isOpen);
+  });
+
+  closeTriggers.forEach((el) => {
+    el.addEventListener("click", () => {
+      isOpen = false;
+      setMenu(false);
+    });
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen) {
+      isOpen = false;
+      setMenu(false);
+    }
+  });
+}
+
+// ===============================
+// TEMA OSCURO / CLARO
+// ===============================
+function applyTheme(theme) {
+  body.classList.remove("theme-dark", "theme-light");
+  body.classList.add(`theme-${theme}`);
+  localStorage.setItem("theme", theme);
+
+  const icon = theme === "dark" ? "🌙" : "☀️";
+  document.querySelectorAll(".theme-toggle__icon").forEach((el) => {
+    el.textContent = icon;
+  });
+}
+
+(function initTheme() {
+  const stored = localStorage.getItem("theme");
+  const prefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const theme = stored || (prefersDark ? "dark" : "light");
+  applyTheme(theme);
+})();
+
+function toggleTheme() {
+  const isDark = body.classList.contains("theme-dark");
+  applyTheme(isDark ? "light" : "dark");
+}
+
+if (desktopThemeToggle) desktopThemeToggle.addEventListener("click", toggleTheme);
+if (mobileThemeToggle) mobileThemeToggle.addEventListener("click", toggleTheme);
+
+// ===============================
+// ANIMACIÓN DE REVEAL AL HACER SCROLL
+// ===============================
+if ("IntersectionObserver" in window && revealEls.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.18 }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add("is-visible"));
+}
+
+// ===============================
+// AÑO EN EL FOOTER
+// ===============================
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
+// ===============================
+// MODAL DE CONTACTO
+// ===============================
+function setModal(open) {
+  if (!contactModal) return;
+  contactModal.classList.toggle("is-open", open);
+}
+
+if (openModalBtn && contactModal) {
+  openModalBtn.addEventListener("click", () => setModal(true));
+}
+
+closeModalEls.forEach((el) => {
+  el.addEventListener("click", () => setModal(false));
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && contactModal?.classList.contains("is-open")) {
+    setModal(false);
+  }
+});
+
+// ===============================
+// COPIAR CORREO AL PORTAPAPELES
+// ===============================
+if (copyEmailBtn && copiedBadge) {
+  copyEmailBtn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
+      copiedBadge.setAttribute("aria-hidden", "false");
+      copiedBadge.classList.add("is-visible");
+
+      setTimeout(() => {
+        copiedBadge.classList.remove("is-visible");
+        copiedBadge.setAttribute("aria-hidden", "true");
+      }, 1800);
+    } catch (err) {
+      console.error("No se pudo copiar el correo", err);
+      alert("No se pudo copiar. Copia manualmente: " + CONTACT_EMAIL);
+    }
+  });
+}
+
+</script>
+
+    <!-- Script específico de búsqueda / filtros -->
+    <script>
+      (function () {
+        const searchInput = document.getElementById("blog-search");
+        const yearSelect = document.getElementById("filter-year");
+        const monthSelect = document.getElementById("filter-month");
+        const tagButtons = document.querySelectorAll(".tag-chip");
+        const cards = document.querySelectorAll(".blog-card");
+        const emptyState = document.getElementById("blog-empty");
+
+        let activeTag = "all";
+
+        function normalizar(str) {
+          return str
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "");
+        }
+
+        function aplicarFiltros() {
+          const term = normalizar(searchInput.value || "");
+          const year = yearSelect.value;
+          const month = monthSelect.value;
+
+          let visibles = 0;
+
+          cards.forEach((card) => {
+            const cardTitle = normalizar(card.dataset.title || "");
+            const cardYear = card.dataset.year;
+            const cardMonth = card.dataset.month;
+            const cardTags = normalizar(card.dataset.tags || "");
+
+            let match = true;
+
+            if (term && !cardTitle.includes(term) && !cardTags.includes(term)) {
+              match = false;
+            }
+
+            if (year !== "all" && cardYear !== year) {
+              match = false;
+            }
+
+            if (month !== "all" && cardMonth !== month) {
+              match = false;
+            }
+
+            if (activeTag !== "all" && !cardTags.includes(activeTag)) {
+              match = false;
+            }
+
+            if (match) {
+              card.style.display = "";
+              card.classList.add("blog-card--visible");
+              visibles++;
+            } else {
+              card.style.display = "none";
+            }
+          });
+
+          if (emptyState) {
+            emptyState.hidden = visibles > 0;
+          }
+        }
+
+        if (searchInput) {
+          searchInput.addEventListener("input", () => {
+            aplicarFiltros();
+          });
+        }
+
+        if (yearSelect) {
+          yearSelect.addEventListener("change", aplicarFiltros);
+        }
+
+        if (monthSelect) {
+          monthSelect.addEventListener("change", aplicarFiltros);
+        }
+
+        tagButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            tagButtons.forEach((b) => b.classList.remove("tag-chip--active"));
+            btn.classList.add("tag-chip--active");
+            activeTag = btn.dataset.tag || "all";
+            aplicarFiltros();
+          });
+        });
+
+        aplicarFiltros();
+      })();
+    </script>
+  </body>
+</html>
