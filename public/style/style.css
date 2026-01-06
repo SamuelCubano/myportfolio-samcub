@@ -105,8 +105,8 @@ body.theme-light .site-header {
 }
 
 .nav__logo {
-  width: 3rem;
-  height: 3rem;
+  width: 2.6rem;
+  height: 2.6rem;
   border-radius: 2rem;
   border: 1px solid rgba(244, 114, 182, 0.8);
   background-image: url(/img/me.png);
