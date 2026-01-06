@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sobre mí | Samuel Cubano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Conoce más sobre Samuel Cubano: desarrollador web, formación, experiencia y cómo puede ayudar a tu próximo proyecto."
+    />
+    <link rel="stylesheet" href="/style/style-aboutme.css" />
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body class="theme-dark">
+    <!-- HEADER / NAV -->
+    <header class="site-header">
+      <nav class="nav">
+        <a href="/index.html#hero" class="nav__brand">
+          <div class="nav__logo"></div>
+          <span class="nav__brand-text">Samuel Cubano</span>
+        </a>
+
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li><a href="/index.html#hero">Inicio</a></li>
+            <li><a href="/about.html" class="nav__link--active">Sobre mí</a></li>
+            <li><a href="/index.html#skills">Skills</a></li>
+            <li><a href="/index.html#projects">Proyectos</a></li>
+            <li><a href="/index.html#services">Servicios</a></li>
+            <li><a href="/index.html#contact">Contacto</a></li>
+          </ul>
+
+          <!-- Toggle tema -->
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Cambiar tema"
+          >
+            <span class="theme-toggle__icon">🌙</span>
+          </button>
+
+          <a href="/index.html#contact" class="nav__cta">Hablemos</a>
+
+          <!-- Hamburguesa -->
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+          >
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- MENÚ MÓVIL -->
+      <div class="mobile-menu">
+        <div class="mobile-menu__overlay" data-close-menu></div>
+        <div class="mobile-menu__panel">
+          <div class="mobile-menu__top">
+            <span class="mobile-menu__title">Menú</span>
+            <button
+              class="mobile-menu__close"
+              type="button"
+              aria-label="Cerrar menú"
+              data-close-menu
+            >
+              ✕
+            </button>
+          </div>
+
+          <ul class="mobile-menu__links">
+            <li><a href="/index.html#hero" data-close-menu>INICIO</a></li>
+            <li><a href="/about.html" data-close-menu>SOBRE MÍ</a></li>
+            <li><a href="/index.html#skills" data-close-menu>SKILLS</a></li>
+            <li><a href="/index.html#projects" data-close-menu>PROYECTOS</a></li>
+            <li><a href="/index.html#services" data-close-menu>SERVICIOS</a></li>
+            <li><a href="/index.html#contact" data-close-menu>CONTACTO</a></li>
+          </ul>
+
+          <div class="mobile-menu__bottom">
+            <button
+              class="theme-toggle theme-toggle--mobile"
+              type="button"
+              aria-label="Cambiar tema"
+            >
+              <span class="theme-toggle__icon">🌙</span>
+              <span class="theme-toggle__label">Modo oscuro / claro</span>
+            </button>
+
+            <a
+              href="/index.html#contact"
+              class="mobile-menu__cta"
+              data-close-menu
+            >
+              HABLEMOS
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SOBRE MÍ -->
+      <section class="page-hero reveal">
+        <div class="page-hero__inner">
+          <div class="page-hero__badge">Sobre mí</div>
+          <h1 class="page-hero__title">
+            Soy Samuel, desarrollador web con foco en experiencias limpias,
+            modernas y sin drama técnico.
+          </h1>
+          <p class="page-hero__text">
+            Me muevo entre código, diseño y estrategia. No solo construyo
+            pantallas: conecto interfaces con objetivos reales de negocio.
+          </p>
+
+          <div class="page-hero__tags">
+            <span>Frontend</span>
+            <span>Experiencias digitales</span>
+            <span>Aprendizaje constante</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- PERFIL + DATOS RÁPIDOS -->
+      <section class="section section--alt reveal">
+        <div class="section__inner about-layout">
+          <div class="about-layout__main">
+            <h2 class="section__eyebrow">Quién soy</h2>
+            <p class="section__title">
+              Un dev que disfruta tanto el código como entender para qué se
+              está construyendo.
+            </p>
+            <p class="section__text">
+              Soy Samuel Cubano, desarrollador web con mentalidad curiosa y
+              ganas constantes de mejorar. Disfruto crear interfaces limpias,
+              animaciones sutiles y flujos que tengan sentido para quien los
+              usa.
+            </p>
+            <p class="section__text">
+              Me gusta trabajar cercano a las personas: entender el proyecto, el
+              contexto y lo que realmente se quiere lograr, para que cada
+              pantalla tenga una razón de existir y no sea solo “una web más”.
+            </p>
+            <p class="section__text">
+              Cuando no estoy escribiendo código, probablemente estoy
+              aprendiendo algo nuevo, ajustando detalles visuales o pensando
+              cómo hacer que la próxima versión del proyecto sea aún más sólida.
+            </p>
+          </div>
+
+          <aside class="about-layout__side">
+            <div class="about-card">
+              <p class="about-card__label">Actualmente</p>
+              <p class="about-card__value">
+                Desarrollador web · Enfocado en Frontend
+              </p>
+              <p class="about-card__note">
+                Abierto a colaborar en proyectos web, productos digitales y
+                equipos con ganas de construir cosas con intención.
+              </p>
+            </div>
+
+            <div class="about-card">
+              <p class="about-card__label">Dónde estudio</p>
+              <p class="about-card__value">
+                <strong>Tu Universidad / Instituto</strong>
+              </p>
+              <p class="about-card__note">
+                Estudiante de
+                <strong>Desarrollo / Ingeniería / carrera relacionada</strong>,
+                consolidando bases sólidas en programación, lógica y
+                tecnologías web.
+              </p>
+            </div>
+
+            <div class="about-card">
+              <p class="about-card__label">Contacto rápido</p>
+              <p class="about-card__note">
+                Correo: <strong>samcubdev@gmail.com</strong>
+              </p>
+              <div class="about-card__socials">
+                <a
+                  href="https://github.com/tuusuario"
+                  target="_blank"
+                  rel="noreferrer"
+                  >GitHub</a
+                >
+                <a
+                  href="https://instagram.com/tuusuario"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Instagram</a
+                >
+                <a
+                  href="https://linkedin.com/in/tuusuario"
+                  target="_blank"
+                  rel="noreferrer"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- QUÉ HAGO -->
+      <section class="section reveal">
+        <div class="section__inner">
+          <div class="section__header">
+            <div>
+              <h2 class="section__eyebrow">Qué hago</h2>
+              <p class="section__title">
+                Cómo pienso los proyectos y en qué puedo sumar.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-grid">
+            <article class="about-pill">
+              <p class="about-pill__label">01 · Interfaces & layout</p>
+              <p class="about-pill__text">
+                Maqueto interfaces modernas, responsive y con atención al
+                detalle. Nada de maquetas rotas en mobile.
+              </p>
+            </article>
+
+            <article class="about-pill">
+              <p class="about-pill__label">02 · Experiencia de usuario</p>
+              <p class="about-pill__text">
+                Me preocupo por la claridad: textos entendibles, flujos lógicos
+                y elementos que guían al usuario sin fricción.
+              </p>
+            </article>
+
+            <article class="about-pill">
+              <p class="about-pill__label">03 · Performance & orden</p>
+              <p class="about-pill__text">
+                Busco código mantenible, componentes reutilizables y sitios que
+                carguen rápido, incluso en conexiones normales.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMACIÓN -->
+      <section class="section section--alt reveal">
+        <div class="section__inner">
+          <div class="section__header">
+            <div>
+              <h2 class="section__eyebrow">Formación</h2>
+              <p class="section__title">
+                Estudio formal + autoaprendizaje constante.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <p class="timeline__period">Año inicio – Actualidad</p>
+                <p class="timeline__title">Carrera / programa principal</p>
+                <p class="timeline__place">
+                  Nombre de tu Universidad / Instituto
+                </p>
+                <p class="timeline__text">
+                  Enfocado en bases sólidas de programación, estructuras de
+                  datos, pensamiento lógico y desarrollo de aplicaciones.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <p class="timeline__period">Año – Año</p>
+                <p class="timeline__title">Curso / Bootcamp de Desarrollo Web</p>
+                <p class="timeline__place">Plataforma / Academia</p>
+                <p class="timeline__text">
+                  Práctica intensiva en HTML, CSS, JavaScript y construcción de
+                  proyectos web reales orientados a portfolio.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <p class="timeline__period">Siempre</p>
+                <p class="timeline__title">Aprendizaje autodidacta</p>
+                <p class="timeline__place">
+                  Documentación, cursos online, práctica
+                </p>
+                <p class="timeline__text">
+                  Me mantengo al día con nuevas herramientas, frameworks y
+                  buenas prácticas para seguir mejorando como dev.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCIA -->
+      <section class="section reveal">
+        <div class="section__inner">
+          <div class="section__header">
+            <div>
+              <h2 class="section__eyebrow">Experiencia</h2>
+              <p class="section__title">
+                Proyectos y roles donde he puesto las manos en el código.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline timeline--alt">
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <p class="timeline__period">Año – Actualidad</p>
+                <p class="timeline__title">Desarrollador web · Freelance</p>
+                <p class="timeline__place">
+                  Proyectos para clientes y personales
+                </p>
+                <p class="timeline__text">
+                  Desarrollo de landings, sitios informativos y pequeños
+                  productos digitales, desde la idea hasta la entrega final.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <p class="timeline__period">Año – Año</p>
+                <p class="timeline__title">Proyecto académico destacado</p>
+                <p class="timeline__place">Universidad / Curso</p>
+                <p class="timeline__text">
+                  Implementación de una aplicación web completa como parte de un
+                  proyecto académico, conectando frontend con APIs y buenas
+                  prácticas de diseño.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <p class="timeline__period">Año – Año</p>
+                <p class="timeline__title">Rol / Prácticas / Colaboración</p>
+                <p class="timeline__place">Empresa / Equipo / Startup</p>
+                <p class="timeline__text">
+                  Participación en un entorno de trabajo real, colaborando con
+                  otros perfiles (diseño, marketing, negocio) y aprendiendo
+                  dinámica de equipo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="section section--contact reveal">
+        <div class="section__inner section__inner--narrow">
+          <h2 class="section__eyebrow">¿Trabajamos algo juntos?</h2>
+          <p class="section__title">
+            Si te interesa lo que hago, podemos llevar tu idea a una versión
+            real.
+          </p>
+          <p class="section__text section__text--center">
+            Puedes revisar mis proyectos, escribirme por redes o contactarme
+            directo. La idea es simple: construir algo que funcione y que te
+            represente.
+          </p>
+
+          <div class="contact-cta">
+            <div class="contact-cta__info">
+              <p class="contact-cta__eyebrow">Próximo paso</p>
+              <h3 class="contact-cta__title">
+                Hablemos de tu proyecto o de una posible colaboración.
+              </h3>
+              <p class="contact-cta__text">
+                Te comparto mis datos de contacto para que elijas el canal que
+                te resulte más cómodo. Sin presión.
+              </p>
+            </div>
+
+            <div class="contact-cta__actions">
+              <button
+                type="button"
+                id="open-contact-modal"
+                class="contact-cta__button"
+              >
+                <span>Ver datos de contacto</span>
+                <span class="contact-cta__icon">⚡</span>
+              </button>
+              <p class="contact-cta__hint">
+                Verás mi email (para copiar) y mis redes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- MODAL DE CONTACTO -->
+    <div class="modal" id="contact-modal" aria-hidden="true">
+      <div class="modal__overlay" data-close-modal></div>
+
+      <div
+        class="modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-modal-title"
+      >
+        <button
+          class="modal__close"
+          type="button"
+          aria-label="Cerrar"
+          data-close-modal
+        >
+          ✕
+        </button>
+
+        <p class="modal__eyebrow">Contacto directo</p>
+
+        <h3 class="modal__title" id="contact-modal-title">
+          Tienes una idea, la construimos.
+        </h3>
+
+        <p class="modal__text">
+          Aquí tienes mis datos para que me escribas cuando quieras. Copia el
+          correo o abre la red que más uses.
+        </p>
+
+        <div class="modal__group">
+          <p class="modal__label">Email</p>
+
+          <button type="button" class="modal__email" id="copy-email-btn">
+            <span class="modal__email-value">samcubdev@gmail.com</span>
+            <span class="modal__email-copy">Copiar</span>
+          </button>
+
+          <span class="modal__copied" id="copied-badge" aria-hidden="true">
+            Correo copiado ✅
+          </span>
+        </div>
+
+        <div class="modal__group">
+          <p class="modal__label">Redes</p>
+
+          <div class="modal__socials">
+            <a
+              href="https://github.com/tuusuario"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://instagram.com/tuusuario"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="https://linkedin.com/in/tuusuario"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__name">Samuel Cubano</span>
+          <span class="footer__role">Desarrollador Web</span>
+        </div>
+
+        <div class="footer__links">
+          <a href="/index.html#hero">Inicio</a>
+          <a href="/index.html#projects">Proyectos</a>
+          <a href="/index.html#contact">Contacto</a>
+        </div>
+
+        <div class="footer__social">
+          <a
+            href="https://github.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="GitHub"
+          >
+            GH
+          </a>
+          <a
+            href="https://instagram.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="Instagram"
+          >
+            IG
+          </a>
+          <a
+            href="https://linkedin.com/in/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="LinkedIn"
+          >
+            IN
+          </a>
+        </div>
+      </div>
+      <p class="footer__copy">
+        © <span id="year"></span> Samuel Cubano. Todos los derechos reservados.
+      </p>
+    </footer>
+
+  
+    <script>
+// ===============================
+// SELECTORES GENERALES
+// ===============================
+const body = document.body;
+const toggleBtn = document.querySelector(".nav__toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeTriggers = document.querySelectorAll("[data-close-menu]");
+const desktopThemeToggle = document.querySelector(".theme-toggle");
+const mobileThemeToggle = document.querySelector(".theme-toggle--mobile");
+const yearSpan = document.getElementById("year");
+const revealEls = document.querySelectorAll(".reveal");
+
+// Modal contacto
+const contactModal = document.getElementById("contact-modal");
+const openModalBtn = document.getElementById("open-contact-modal");
+const closeModalEls = document.querySelectorAll("[data-close-modal]");
+const copyEmailBtn = document.getElementById("copy-email-btn");
+const copiedBadge = document.getElementById("copied-badge");
+const CONTACT_EMAIL = "samcubdev@gmail.com";
+
+// ===============================
+// NAV / MENÚ MÓVIL
+// ===============================
+function setMenu(open) {
+  if (!toggleBtn || !mobileMenu) return;
+  body.classList.toggle("nav-open", open);
+  toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
+}
+
+if (toggleBtn && mobileMenu) {
+  let isOpen = false;
+
+  toggleBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    setMenu(isOpen);
+  });
+
+  closeTriggers.forEach((el) => {
+    el.addEventListener("click", () => {
+      isOpen = false;
+      setMenu(false);
+    });
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen) {
+      isOpen = false;
+      setMenu(false);
+    }
+  });
+}
+
+// ===============================
+// TEMA OSCURO / CLARO
+// ===============================
+function applyTheme(theme) {
+  body.classList.remove("theme-dark", "theme-light");
+  body.classList.add(`theme-${theme}`);
+  localStorage.setItem("theme", theme);
+
+  const icon = theme === "dark" ? "🌙" : "☀️";
+  document.querySelectorAll(".theme-toggle__icon").forEach((el) => {
+    el.textContent = icon;
+  });
+}
+
+(function initTheme() {
+  const stored = localStorage.getItem("theme");
+  const prefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const theme = stored || (prefersDark ? "dark" : "light");
+  applyTheme(theme);
+})();
+
+function toggleTheme() {
+  const isDark = body.classList.contains("theme-dark");
+  applyTheme(isDark ? "light" : "dark");
+}
+
+if (desktopThemeToggle) desktopThemeToggle.addEventListener("click", toggleTheme);
+if (mobileThemeToggle) mobileThemeToggle.addEventListener("click", toggleTheme);
+
+// ===============================
+// ANIMACIÓN DE REVEAL AL HACER SCROLL
+// ===============================
+if ("IntersectionObserver" in window && revealEls.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.18 }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add("is-visible"));
+}
+
+// ===============================
+// AÑO EN EL FOOTER
+// ===============================
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
+// ===============================
+// MODAL DE CONTACTO
+// ===============================
+function setModal(open) {
+  if (!contactModal) return;
+  contactModal.classList.toggle("is-open", open);
+}
+
+if (openModalBtn && contactModal) {
+  openModalBtn.addEventListener("click", () => setModal(true));
+}
+
+closeModalEls.forEach((el) => {
+  el.addEventListener("click", () => setModal(false));
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && contactModal?.classList.contains("is-open")) {
+    setModal(false);
+  }
+});
+
+// ===============================
+// COPIAR CORREO AL PORTAPAPELES
+// ===============================
+if (copyEmailBtn && copiedBadge) {
+  copyEmailBtn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
+      copiedBadge.setAttribute("aria-hidden", "false");
+      copiedBadge.classList.add("is-visible");
+
+      setTimeout(() => {
+        copiedBadge.classList.remove("is-visible");
+        copiedBadge.setAttribute("aria-hidden", "true");
+      }, 1800);
+    } catch (err) {
+      console.error("No se pudo copiar el correo", err);
+      alert("No se pudo copiar. Copia manualmente: " + CONTACT_EMAIL);
+    }
+  });
+}
+
+</script>
+  </body>
+</html>

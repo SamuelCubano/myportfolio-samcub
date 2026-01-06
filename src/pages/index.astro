@@ -1,0 +1,693 @@
+---
+
+---
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jesús Coello | Desarrollador Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portafolio de Jesús Coello, desarrollador web especializado en experiencias modernas, rápidas y con estilo callejero pero profesional."
+    />
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body class="theme-dark">
+    <!-- HEADER / NAV -->
+    <header class="site-header">
+      <nav class="nav">
+        <a href="#hero" class="nav__brand">
+          <div class="nav__logo"></div>
+          <span class="nav__brand-text">Samuel Cubano</span>
+        </a>
+
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li><a href="/aboutme/">Sobre mí</a></li>
+            <li><a href="/skills/">Skills</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+
+          <!-- Toggle tema -->
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Cambiar tema"
+          >
+            <span class="theme-toggle__icon">🌙</span>
+          </button>
+
+          <a href="#contact" class="nav__cta">Hablemos</a>
+
+          <!-- Hamburguesa -->
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+          >
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- MENÚ MÓVIL -->
+      <div class="mobile-menu">
+        <div class="mobile-menu__overlay" data-close-menu></div>
+        <div class="mobile-menu__panel">
+          <div class="mobile-menu__top">
+            <span class="mobile-menu__title">Menú</span>
+            <button
+              class="mobile-menu__close"
+              type="button"
+              aria-label="Cerrar menú"
+              data-close-menu
+            >
+              ✕
+            </button>
+          </div>
+
+          <ul class="mobile-menu__links">
+            <li><a href="#about" data-close-menu>SOBRE MÍ</a></li>
+            <li><a href="#skills" data-close-menu>SKILLS</a></li>
+            <li><a href="#projects" data-close-menu>PROYECTOS</a></li>
+            <li><a href="#services" data-close-menu>SERVICIOS</a></li>
+            <li><a href="#contact" data-close-menu>CONTACTO</a></li>
+          </ul>
+
+          <div class="mobile-menu__bottom">
+            <button
+              class="theme-toggle theme-toggle--mobile"
+              type="button"
+              aria-label="Cambiar tema"
+            >
+              <span class="theme-toggle__icon">🌙</span>
+              <span class="theme-toggle__label">Modo oscuro / claro</span>
+            </button>
+
+            <a
+              href="#contact"
+              class="mobile-menu__cta"
+              data-close-menu
+            >
+              HABLEMOS
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="hero" class="hero reveal">
+        <div class="hero__glow"></div>
+
+        <div class="hero__content">
+          <p class="hero__tag">Desarrollador Web · Frontend</p>
+          <h1 class="hero__title">
+            Creo experiencias web
+            <span>rápidas, modernas y con calle.</span>
+          </h1>
+          <p class="hero__text">
+            Soy Jesús Coello. No hago páginas “bonitas” y ya: diseño, maqueto y
+            desarrollo pensando en que tu sitio cargue rápido, se entienda fácil
+            y genere resultados reales para tu marca o empresa.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">Ver proyectos</a>
+            <a href="#contact" class="btn btn--ghost">Hablemos</a>
+          </div>
+
+          <div class="hero__chips">
+            <span>Astro · React · JS</span>
+            <span>Performance · UX · SEO</span>
+          </div>
+        </div>
+
+        <aside class="hero__card">
+          <p class="hero__card-label">Qué puedo hacer por tu proyecto</p>
+          <div class="hero__card-item">
+            <span class="dot dot--magenta"></span>
+            <p>
+              <strong>Landings y webs que convierten:</strong> diseño moderno,
+              claro y listo para campañas y tráfico real.
+            </p>
+          </div>
+          <div class="hero__card-item">
+            <span class="dot dot--cyan"></span>
+            <p>
+              <strong>Integraciones y automatización:</strong> formularios,
+              APIs, CRM y lógica que conecte todo sin drama.
+            </p>
+          </div>
+          <div class="hero__card-item">
+            <span class="dot dot--green"></span>
+            <p>
+              <strong>Código limpio y escalable:</strong> preparado para crecer
+              sin volverse un caos.
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section section--alt reveal">
+        <div class="section__inner section__inner--split">
+          <div class="section__block">
+            <h2 class="section__eyebrow">Sobre mí</h2>
+            <p class="section__title">
+              Desarrollador web con mentalidad de negocio y estilo callejero
+              pero profesional.
+            </p>
+            <p class="section__text">
+              Me enfoco en tres cosas: que el sitio se vea bien, que cargue
+              rápido y que tenga sentido para el usuario y para el negocio.
+              Menos ruido, más claridad.
+            </p>
+            <p class="section__text">
+              Trabajo con
+              <strong>
+                HTML, CSS, JavaScript, Astro, React, Tailwind y APIs
+              </strong>
+              para armar productos digitales que se ven bien y funcionan mejor.
+            </p>
+          </div>
+
+          <div class="about__stats">
+            <div class="about__header">
+              <div>
+                <p class="about__label">Enfoque</p>
+                <p class="about__value">UX · Performance · Conversión</p>
+              </div>
+              <span class="about__tag">Street · Pro</span>
+            </div>
+            <div class="about__grid">
+              <div class="about__card">
+                <p class="about__number">+10</p>
+                <p class="about__caption">
+                  Proyectos
+                  <br />
+                  web
+                </p>
+              </div>
+              <div class="about__card">
+                <p class="about__number">+X</p>
+                <p class="about__caption">
+                  Marcas
+                  <br />
+                  impactadas
+                </p>
+              </div>
+            </div>
+            <p class="about__note">
+              * Números de ejemplo. Luego los ajustamos con tus datos reales.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section reveal">
+        <div class="section__inner">
+          <div class="section__header">
+            <div>
+              <h2 class="section__eyebrow">Skills</h2>
+              <p class="section__title">
+                Herramientas con las que trabajo a diario.
+              </p>
+            </div>
+          </div>
+
+          <div class="skills">
+            <div class="skills__group">
+              <p class="skills__title">Frontend</p>
+              <div class="skills__chips">
+                <span class="skill-chip">HTML5</span>
+                <span class="skill-chip">CSS3</span>
+                <span class="skill-chip">JavaScript</span>
+                <span class="skill-chip">React</span>
+                <span class="skill-chip">Astro</span>
+                <span class="skill-chip">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <div class="skills__group">
+              <p class="skills__title">Arquitectura & Flujo</p>
+              <div class="skills__chips">
+                <span class="skill-chip">Componentización</span>
+                <span class="skill-chip">Responsive Design</span>
+                <span class="skill-chip">Performance</span>
+                <span class="skill-chip">Accesibilidad básica</span>
+              </div>
+            </div>
+
+            <div class="skills__group">
+              <p class="skills__title">Herramientas & Extras</p>
+              <div class="skills__chips">
+                <span class="skill-chip">Git</span>
+                <span class="skill-chip">GitHub</span>
+                <span class="skill-chip">Figma (básico)</span>
+                <span class="skill-chip">Integración APIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section section--alt reveal">
+        <div class="section__inner">
+          <div class="section__header">
+            <div>
+              <h2 class="section__eyebrow">Proyectos</h2>
+              <p class="section__title">
+                Una muestra rápida de lo que puedo construir.
+              </p>
+            </div>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <div class="card__thumb card__thumb--magenta"></div>
+              <div class="card__body">
+                <h3 class="card__title">Landing para SaaS</h3>
+                <p class="card__text">
+                  Landing ultra rápida pensada para captar leads con campañas
+                  pagas sin perder performance.
+                </p>
+                <p class="card__meta">
+                  Astro · Tailwind · Formularios integrados
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__thumb card__thumb--cyan"></div>
+              <div class="card__body">
+                <h3 class="card__title">Portafolio + blog personal</h3>
+                <p class="card__text">
+                  Espacio para mostrar proyectos, publicar contenido y ofrecer
+                  servicios en una sola experiencia.
+                </p>
+                <p class="card__meta">Astro · MDX · Diseño responsive</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__thumb card__thumb--gold"></div>
+              <div class="card__body">
+                <h3 class="card__title">Micrositio de campaña</h3>
+                <p class="card__text">
+                  Enfoque total en mobile y conversiones, con medición lista
+                  para optimizar.
+                </p>
+                <p class="card__meta">HTML · CSS · JS · Analytics</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section reveal">
+        <div class="section__inner">
+          <div class="section__header">
+            <div>
+              <h2 class="section__eyebrow">Servicios</h2>
+              <p class="section__title">
+                Cómo puedo ayudarte desde el desarrollo web.
+              </p>
+            </div>
+          </div>
+
+          <div class="services">
+            <div class="service">
+              <p class="service__label">01 · Sitios & Landings</p>
+              <p class="service__text">
+                Webs enfocadas a objetivos claros: lanzar un producto, captar
+                leads o mostrar tu marca con seriedad.
+              </p>
+            </div>
+            <div class="service">
+              <p class="service__label">02 · Integraciones & Automatización</p>
+              <p class="service__text">
+                Formularios conectados, CRM, APIs y lógica para que no se
+                pierda ningún contacto ni dato.
+              </p>
+            </div>
+            <div class="service">
+              <p class="service__label">03 · Optimización & Refactor</p>
+              <p class="service__text">
+                Mejoro velocidad, corrijo bugs y dejo tu proyecto respirando
+                mejor, listo para escalar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+ 
+<!-- CONTACT -->
+<section id="contact" class="section section--contact reveal">
+  <div class="section__inner section__inner--narrow">
+    <h2 class="section__eyebrow">Contacto</h2>
+
+    <p class="section__title">
+      ¿Tienes un proyecto que necesita una web seria, moderna y con estilo?
+    </p>
+
+    <p class="section__text section__text--center">
+      Cuéntame qué tienes en mente y te ayudo a convertirlo en una experiencia web
+      clara, rápida y lista para usarse de verdad.
+    </p>
+
+    <!-- NUEVO CTA DE CONTACTO -->
+    <div class="contact-cta">
+      <div class="contact-cta__info">
+        <p class="contact-cta__eyebrow">Hablemos de tu idea</p>
+        <h3 class="contact-cta__title">
+          ¿Quieres lanzar, renovar o mejorar tu sitio?
+        </h3>
+        <p class="contact-cta__text">
+          Te comparto mi correo y redes en un solo lugar para que elijas cómo
+          contactarme. Sin formularios eternos, directo al grano.
+        </p>
+      </div>
+
+      <div class="contact-cta__actions">
+        <button
+          type="button"
+          id="open-contact-modal"
+          class="btn btn--primary"
+        >
+          Ver datos de contacto
+        </button>
+        <p class="contact-cta__hint">
+          Verás mi email (para copiar) y mis redes.
+        </p>
+      </div>
+    </div>
+
+    <p class="section__note">
+      Si lo prefieres, también puedes escribirme luego por correo o LinkedIn
+      directamente. Este bloque es solo para hacerte la vida más fácil.
+    </p>
+  </div>
+</section>
+
+<!-- MODAL DE CONTACTO -->
+<div class="modal" id="contact-modal" aria-hidden="true">
+  <div class="modal__overlay" data-close-modal></div>
+
+  <div
+    class="modal__panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contact-modal-title"
+  >
+    <!-- Botón cerrar -->
+    <button
+      class="modal__close"
+      type="button"
+      aria-label="Cerrar"
+      data-close-modal
+    >
+      ✕
+    </button>
+
+    <p class="modal__eyebrow">Contacto directo</p>
+
+    <h3 class="modal__title" id="contact-modal-title">
+      Tienes una idea, la construimos.
+    </h3>
+
+    <p class="modal__text">
+      Aquí tienes mis datos para que me escribas cuando quieras. Copia el correo
+      o abre la red que más uses y listo.
+    </p>
+
+    <!-- Email -->
+    <div class="modal__group">
+      <p class="modal__label">Email</p>
+
+      <button type="button" class="modal__email" id="copy-email-btn">
+        <span class="modal__email-value">samcubdev@gmail.com</span>
+        <span class="modal__email-copy">Copiar</span>
+      </button>
+
+      <span class="modal__copied" id="copied-badge" aria-hidden="true">
+        Correo copiado ✅
+      </span>
+    </div>
+
+    <!-- Redes -->
+    <div class="modal__group">
+      <p class="modal__label">Redes</p>
+
+      <div class="modal__socials">
+        <a
+          href="https://github.com/tuusuario"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://instagram.com/tuusuario"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="https://linkedin.com/in/tuusuario"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__name">Jesús Coello</span>
+          <span class="footer__role">Desarrollador Web</span>
+        </div>
+
+        <div class="footer__links">
+          <a href="#hero">Inicio</a>
+          <a href="#projects">Proyectos</a>
+          <a href="#contact">Contacto</a>
+        </div>
+
+        <div class="footer__social">
+          <a
+            href="https://github.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="GitHub"
+          >
+            GH
+          </a>
+          <a
+            href="https://instagram.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="Instagram"
+          >
+            IG
+          </a>
+          <a
+            href="https://linkedin.com/in/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="LinkedIn"
+          >
+            IN
+          </a>
+        </div>
+      </div>
+      <p class="footer__copy">
+        © <span id="year"></span> Jesús Coello. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script>
+// ===============================
+// SELECTORES GENERALES
+// ===============================
+const body = document.body;
+const toggleBtn = document.querySelector(".nav__toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeTriggers = document.querySelectorAll("[data-close-menu]");
+const desktopThemeToggle = document.querySelector(".theme-toggle");
+const mobileThemeToggle = document.querySelector(".theme-toggle--mobile");
+const yearSpan = document.getElementById("year");
+const revealEls = document.querySelectorAll(".reveal");
+
+// Modal contacto
+const contactModal = document.getElementById("contact-modal");
+const openModalBtn = document.getElementById("open-contact-modal");
+const closeModalEls = document.querySelectorAll("[data-close-modal]");
+const copyEmailBtn = document.getElementById("copy-email-btn");
+const copiedBadge = document.getElementById("copied-badge");
+const CONTACT_EMAIL = "samcubdev@gmail.com";
+
+// ===============================
+// NAV / MENÚ MÓVIL
+// ===============================
+function setMenu(open) {
+  if (!toggleBtn || !mobileMenu) return;
+  body.classList.toggle("nav-open", open);
+  toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
+}
+
+if (toggleBtn && mobileMenu) {
+  let isOpen = false;
+
+  toggleBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    setMenu(isOpen);
+  });
+
+  closeTriggers.forEach((el) => {
+    el.addEventListener("click", () => {
+      isOpen = false;
+      setMenu(false);
+    });
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen) {
+      isOpen = false;
+      setMenu(false);
+    }
+  });
+}
+
+// ===============================
+// TEMA OSCURO / CLARO
+// ===============================
+function applyTheme(theme) {
+  body.classList.remove("theme-dark", "theme-light");
+  body.classList.add(`theme-${theme}`);
+  localStorage.setItem("theme", theme);
+
+  const icon = theme === "dark" ? "🌙" : "☀️";
+  document.querySelectorAll(".theme-toggle__icon").forEach((el) => {
+    el.textContent = icon;
+  });
+}
+
+(function initTheme() {
+  const stored = localStorage.getItem("theme");
+  const prefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const theme = stored || (prefersDark ? "dark" : "light");
+  applyTheme(theme);
+})();
+
+function toggleTheme() {
+  const isDark = body.classList.contains("theme-dark");
+  applyTheme(isDark ? "light" : "dark");
+}
+
+if (desktopThemeToggle) desktopThemeToggle.addEventListener("click", toggleTheme);
+if (mobileThemeToggle) mobileThemeToggle.addEventListener("click", toggleTheme);
+
+// ===============================
+// ANIMACIÓN DE REVEAL AL HACER SCROLL
+// ===============================
+if ("IntersectionObserver" in window && revealEls.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.18 }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add("is-visible"));
+}
+
+// ===============================
+// AÑO EN EL FOOTER
+// ===============================
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
+// ===============================
+// MODAL DE CONTACTO
+// ===============================
+function setModal(open) {
+  if (!contactModal) return;
+  contactModal.classList.toggle("is-open", open);
+}
+
+if (openModalBtn && contactModal) {
+  openModalBtn.addEventListener("click", () => setModal(true));
+}
+
+closeModalEls.forEach((el) => {
+  el.addEventListener("click", () => setModal(false));
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && contactModal?.classList.contains("is-open")) {
+    setModal(false);
+  }
+});
+
+// ===============================
+// COPIAR CORREO AL PORTAPAPELES
+// ===============================
+if (copyEmailBtn && copiedBadge) {
+  copyEmailBtn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
+      copiedBadge.setAttribute("aria-hidden", "false");
+      copiedBadge.classList.add("is-visible");
+
+      setTimeout(() => {
+        copiedBadge.classList.remove("is-visible");
+        copiedBadge.setAttribute("aria-hidden", "true");
+      }, 1800);
+    } catch (err) {
+      console.error("No se pudo copiar el correo", err);
+      alert("No se pudo copiar. Copia manualmente: " + CONTACT_EMAIL);
+    }
+  });
+}
+
+</script>
+  </body>
+</html>

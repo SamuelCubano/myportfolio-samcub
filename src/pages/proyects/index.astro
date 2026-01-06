@@ -1,0 +1,615 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Proyectos | Samuel Cubano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Proyectos de Samuel Cubano: ejemplos reales de desarrollo web con enfoque en frontend y experiencia de usuario."
+    />
+    <link rel="stylesheet" href="/style/style-projects.css" />
+  </head>
+  <body>
+    <!-- HEADER / NAV -->
+    <header class="site-header">
+      <nav class="nav">
+        <a href="/index.html#hero" class="nav__brand">
+          <span class="nav__brand-text">Samuel Cubano</span>
+        </a>
+
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li><a href="/index.html#hero">Inicio</a></li>
+            <li><a href="/about.html">Sobre mí</a></li>
+            <li><a href="/skills.html">Skills</a></li>
+            <li>
+              <a href="/projects.html" class="nav__link--active">Proyectos</a>
+            </li>
+            <li><a href="/index.html#services">Servicios</a></li>
+            <li><a href="/index.html#contact">Contacto</a></li>
+          </ul>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Cambiar tema"
+          >
+            <span class="theme-toggle__icon">🌙</span>
+          </button>
+
+          <a href="/index.html#contact" class="nav__cta">Hablemos</a>
+
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+          >
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- MENÚ MÓVIL -->
+      <div class="mobile-menu">
+        <div class="mobile-menu__overlay" data-close-menu></div>
+        <div class="mobile-menu__panel">
+          <div class="mobile-menu__top">
+            <span class="mobile-menu__title">Menú</span>
+            <button
+              class="mobile-menu__close"
+              type="button"
+              aria-label="Cerrar menú"
+              data-close-menu
+            >
+              ✕
+            </button>
+          </div>
+
+          <ul class="mobile-menu__links">
+            <li><a href="/index.html#hero" data-close-menu>INICIO</a></li>
+            <li><a href="/about.html" data-close-menu>SOBRE MÍ</a></li>
+            <li><a href="/skills.html" data-close-menu>SKILLS</a></li>
+            <li>
+              <a
+                href="/projects.html"
+                data-close-menu
+                class="nav__link--active"
+                >PROYECTOS</a
+              >
+            </li>
+            <li>
+              <a href="/index.html#services" data-close-menu>SERVICIOS</a>
+            </li>
+            <li>
+              <a href="/index.html#contact" data-close-menu>CONTACTO</a>
+            </li>
+          </ul>
+
+          <div class="mobile-menu__bottom">
+            <button
+              class="theme-toggle theme-toggle--mobile"
+              type="button"
+              aria-label="Cambiar tema"
+            >
+              <span class="theme-toggle__icon">🌙</span>
+              <span class="theme-toggle__label">Modo oscuro / claro</span>
+            </button>
+
+            <a
+              href="/index.html#contact"
+              class="mobile-menu__cta"
+              data-close-menu
+            >
+              HABLEMOS
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO PROYECTOS -->
+      <section class="page-hero">
+        <div class="page-hero__inner">
+          <div class="page-hero__badge">Proyectos</div>
+          <h1 class="page-hero__title">
+            Algunos proyectos donde he puesto
+            <span>código, diseño y cabeza.</span>
+          </h1>
+          <p class="page-hero__text">
+            Cada card representa algo real: landings, mini productos y pruebas
+            donde he trabajado layout, lógica y experiencia de usuario. Haz clic
+            en cualquiera para ver más detalles.
+          </p>
+
+          <div class="page-hero__tags">
+            <span>Frontend</span>
+            <span>UX</span>
+            <span>Prototipos reales</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRID DE PROYECTOS -->
+      <section class="section section--alt">
+        <div class="section__inner">
+          <h2 class="section__eyebrow">Galería</h2>
+          <p class="section__title">
+            Proyectos organizados en cards, con detalle en modal.
+          </p>
+
+          <div class="projects-grid">
+            <!-- PROYECTO 1 -->
+            <article class="project-card">
+              <button
+                class="project-card__inner"
+                type="button"
+                data-project-modal="project-1"
+              >
+                <div class="project-card__thumb project-card__thumb--magenta">
+                  <span class="project-card__pill">Landing SaaS</span>
+                </div>
+                <div class="project-card__body">
+                  <h3 class="project-card__title">
+                    Landing para app SaaS de productividad
+                  </h3>
+                  <p class="project-card__text">
+                    Página enfocada en captación de leads, performance y claridad
+                    del mensaje.
+                  </p>
+                  <div class="project-card__meta">
+                    <span>Astro</span>
+                    <span>Tailwind</span>
+                    <span>Form integrado</span>
+                  </div>
+                </div>
+              </button>
+            </article>
+
+            <!-- PROYECTO 2 -->
+            <article class="project-card">
+              <button
+                class="project-card__inner"
+                type="button"
+                data-project-modal="project-2"
+              >
+                <div class="project-card__thumb project-card__thumb--cyan">
+                  <span class="project-card__pill">Portafolio</span>
+                </div>
+                <div class="project-card__body">
+                  <h3 class="project-card__title">
+                    Portafolio personal con secciones dinámicas
+                  </h3>
+                  <p class="project-card__text">
+                    Sitio para mostrar skills, proyectos y contacto con un estilo
+                    moderno y callejero.
+                  </p>
+                  <div class="project-card__meta">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
+                  </div>
+                </div>
+              </button>
+            </article>
+
+            <!-- PROYECTO 3 -->
+            <article class="project-card">
+              <button
+                class="project-card__inner"
+                type="button"
+                data-project-modal="project-3"
+              >
+                <div class="project-card__thumb project-card__thumb--gold">
+                  <span class="project-card__pill">Micrositio campaña</span>
+                </div>
+                <div class="project-card__body">
+                  <h3 class="project-card__title">
+                    Micrositio mobile-first para campaña puntual
+                  </h3>
+                  <p class="project-card__text">
+                    Pensado para tráfico desde redes sociales, enfocado 100% en
+                    conversión.
+                  </p>
+                  <div class="project-card__meta">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Analytics</span>
+                  </div>
+                </div>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="section section--contact">
+        <div class="section__inner section__inner--narrow">
+          <h2 class="section__eyebrow">¿Te imaginas tu proyecto aquí?</h2>
+          <p class="section__title">
+            Podemos armar algo a la medida y dejarlo listo para enseñar.
+          </p>
+          <p class="section__text section__text--center">
+            Si te gusta este tipo de trabajo, podemos adaptar este enfoque a tu
+            marca, tu producto o tu portafolio. Vemos la idea, definimos el
+            objetivo y bajamos todo a código.
+          </p>
+
+          <div class="contact-cta">
+            <div class="contact-cta__info">
+              <p class="contact-cta__eyebrow">Próximo paso</p>
+              <h3 class="contact-cta__title">
+                Te comparto mis datos para que me contactes.
+              </h3>
+              <p class="contact-cta__text">
+                Copias mi correo, revisas mis redes y si ves encaje, me
+                escribes. Sin presión.
+              </p>
+            </div>
+
+            <div class="contact-cta__actions">
+              <button
+                type="button"
+                id="open-contact-modal"
+                class="contact-cta__button"
+              >
+                <span>Ver datos de contacto</span>
+                <span class="contact-cta__icon">⚡</span>
+              </button>
+              <p class="contact-cta__hint">
+                Verás mi email (para copiar) y mis redes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- MODALES DE PROYECTO -->
+    <!-- MODAL PROYECTO 1 -->
+    <div
+      class="project-modal"
+      id="project-1"
+      aria-hidden="true"
+      data-project-modal-root
+    >
+      <div class="project-modal__overlay" data-close-project></div>
+      <div class="project-modal__panel">
+        <button
+          class="project-modal__close"
+          type="button"
+          aria-label="Cerrar"
+          data-close-project
+        >
+          ✕
+        </button>
+
+        <div class="project-modal__grid">
+          <!-- CARRUSEL -->
+          <div class="carousel" data-carousel>
+            <div class="carousel__track">
+              <div class="carousel__slide is-active">
+                <div class="carousel__mock carousel__mock--1">
+                  <span>Hero principal</span>
+                </div>
+              </div>
+              <div class="carousel__slide">
+                <div class="carousel__mock carousel__mock--2">
+                  <span>Sección features</span>
+                </div>
+              </div>
+              <div class="carousel__slide">
+                <div class="carousel__mock carousel__mock--3">
+                  <span>Formulario de contacto</span>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="carousel__control carousel__control--prev"
+              type="button"
+              aria-label="Anterior"
+              data-carousel-prev
+            >
+              ‹
+            </button>
+            <button
+              class="carousel__control carousel__control--next"
+              type="button"
+              aria-label="Siguiente"
+              data-carousel-next
+            >
+              ›
+            </button>
+
+            <div class="carousel__dots" data-carousel-dots></div>
+          </div>
+
+          <!-- CONTENIDO -->
+          <div class="project-modal__content">
+            <p class="project-modal__eyebrow">Proyecto real / demo</p>
+            <h3 class="project-modal__title">
+              Landing para app SaaS de productividad
+            </h3>
+            <p class="project-modal__text">
+              Landing enfocada en conversión, diseñada para recibir tráfico de
+              campañas pagas. Incluye hero claro, sección de beneficios,
+              testimonios y formulario conectado a un servicio de correo.
+            </p>
+
+            <dl class="project-meta">
+              <div class="project-meta__row">
+                <dt>Rol</dt>
+                <dd>Diseño de layout + maquetación + integración básica</dd>
+              </div>
+              <div class="project-meta__row">
+                <dt>Stack</dt>
+                <dd>Astro, Tailwind CSS, JavaScript</dd>
+              </div>
+              <div class="project-meta__row">
+                <dt>Enfoque</dt>
+                <dd>Performance, claridad, landings listas para anuncios</dd>
+              </div>
+            </dl>
+
+            <div class="project-modal__links">
+              <a href="#" target="_blank" class="project-link project-link--primary"
+                >Ver demo (placeholder)</a
+              >
+              <a href="#" target="_blank" class="project-link">Ver código</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL PROYECTO 2 -->
+    <div
+      class="project-modal"
+      id="project-2"
+      aria-hidden="true"
+      data-project-modal-root
+    >
+      <div class="project-modal__overlay" data-close-project></div>
+      <div class="project-modal__panel">
+        <button
+          class="project-modal__close"
+          type="button"
+          aria-label="Cerrar"
+          data-close-project
+        >
+          ✕
+        </button>
+
+        <div class="project-modal__grid">
+          <div class="carousel" data-carousel>
+            <div class="carousel__track">
+              <div class="carousel__slide is-active">
+                <div class="carousel__mock carousel__mock--4">
+                  <span>Home del portafolio</span>
+                </div>
+              </div>
+              <div class="carousel__slide">
+                <div class="carousel__mock carousel__mock--5">
+                  <span>Vista de proyectos</span>
+                </div>
+              </div>
+              <div class="carousel__slide">
+                <div class="carousel__mock carousel__mock--6">
+                  <span>Sección contacto</span>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="carousel__control carousel__control--prev"
+              type="button"
+              aria-label="Anterior"
+              data-carousel-prev
+            >
+              ‹
+            </button>
+            <button
+              class="carousel__control carousel__control--next"
+              type="button"
+              aria-label="Siguiente"
+              data-carousel-next
+            >
+              ›
+            </button>
+
+            <div class="carousel__dots" data-carousel-dots></div>
+          </div>
+
+          <div class="project-modal__content">
+            <p class="project-modal__eyebrow">Proyecto personal</p>
+            <h3 class="project-modal__title">
+              Portafolio web con varias vistas
+            </h3>
+            <p class="project-modal__text">
+              Portafolio pensado para mostrar quién soy, qué hago, mis skills y
+              mis proyectos, con diferentes vistas conectadas entre sí.
+            </p>
+
+            <dl class="project-meta">
+              <div class="project-meta__row">
+                <dt>Rol</dt>
+                <dd>Diseño, desarrollo y estructura de contenido</dd>
+              </div>
+              <div class="project-meta__row">
+                <dt>Stack</dt>
+                <dd>HTML, CSS, JavaScript</dd>
+              </div>
+              <div class="project-meta__row">
+                <dt>Enfoque</dt>
+                <dd>Identidad personal, claridad y usabilidad</dd>
+              </div>
+            </dl>
+
+            <div class="project-modal__links">
+              <a href="#" target="_blank" class="project-link project-link--primary"
+                >Ver portafolio (placeholder)</a
+              >
+              <a href="#" target="_blank" class="project-link">Ver repositorio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL PROYECTO 3 -->
+    <div
+      class="project-modal"
+      id="project-3"
+      aria-hidden="true"
+      data-project-modal-root
+    >
+      <div class="project-modal__overlay" data-close-project></div>
+      <div class="project-modal__panel">
+        <button
+          class="project-modal__close"
+          type="button"
+          aria-label="Cerrar"
+          data-close-project
+        >
+          ✕
+        </button>
+
+        <div class="project-modal__grid">
+          <div class="carousel" data-carousel>
+            <div class="carousel__track">
+              <div class="carousel__slide is-active">
+                <div class="carousel__mock carousel__mock--7">
+                  <span>Pantalla principal mobile</span>
+                </div>
+              </div>
+              <div class="carousel__slide">
+                <div class="carousel__mock carousel__mock--8">
+                  <span>Detalle de oferta</span>
+                </div>
+              </div>
+              <div class="carousel__slide">
+                <div class="carousel__mock carousel__mock--9">
+                  <span>Formulario final</span>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="carousel__control carousel__control--prev"
+              type="button"
+              aria-label="Anterior"
+              data-carousel-prev
+            >
+              ‹
+            </button>
+            <button
+              class="carousel__control carousel__control--next"
+              type="button"
+              aria-label="Siguiente"
+              data-carousel-next
+            >
+              ›
+            </button>
+
+            <div class="carousel__dots" data-carousel-dots></div>
+          </div>
+
+          <div class="project-modal__content">
+            <p class="project-modal__eyebrow">Micrositio de campaña</p>
+            <h3 class="project-modal__title">
+              Micrositio mobile-first orientado a conversiones
+            </h3>
+            <p class="project-modal__text">
+              Página ligera pensada para usuarios que llegan desde redes
+              sociales, con foco total en que entiendan la oferta y completen el
+              formulario.
+            </p>
+
+            <dl class="project-meta">
+              <div class="project-meta__row">
+                <dt>Rol</dt>
+                <dd>Maquetación, copy básico y estructura</dd>
+              </div>
+              <div class="project-meta__row">
+                <dt>Stack</dt>
+                <dd>HTML, CSS, JS ligero, Analytics</dd>
+              </div>
+              <div class="project-meta__row">
+                <dt>Enfoque</dt>
+                <dd>Mobile-first, claridad y seguimiento de métricas</dd>
+              </div>
+            </dl>
+
+            <div class="project-modal__links">
+              <a href="#" target="_blank" class="project-link project-link--primary"
+                >Ver micrositio (placeholder)</a
+              >
+              <a href="#" target="_blank" class="project-link">Ver código</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__name">Samuel Cubano</span>
+          <span class="footer__role">Desarrollador Web</span>
+        </div>
+
+        <div class="footer__links">
+          <a href="/index.html#hero">Inicio</a>
+          <a href="/about.html">Sobre mí</a>
+          <a href="/skills.html">Skills</a>
+          <a href="/projects.html">Proyectos</a>
+        </div>
+
+        <div class="footer__social">
+          <a
+            href="https://github.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="GitHub"
+          >
+            GH
+          </a>
+          <a
+            href="https://instagram.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="Instagram"
+          >
+            IG
+          </a>
+          <a
+            href="https://linkedin.com/in/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="LinkedIn"
+          >
+            IN
+          </a>
+        </div>
+      </div>
+      <p class="footer__copy">
+        © <span id="year"></span> Samuel Cubano. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="/main.js"></script>
+  </body>
+</html>

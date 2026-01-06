@@ -1,0 +1,558 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Skills | Samuel Cubano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Stack, herramientas y skills de Samuel Cubano como desarrollador web frontend."
+    />
+    <link rel="stylesheet" href="/style/style-skills.css" />
+    <link rel="stylesheet" href="/style/style.css">
+  </head>
+  <body class="theme-dark">
+    <!-- HEADER / NAV -->
+    <header class="site-header">
+      <nav class="nav">
+        <a href="#hero" class="nav__brand">
+          <div class="nav__logo"></div>
+          <span class="nav__brand-text">Samuel Cubano</span>
+        </a>
+
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li><a href="/aboutme/">Sobre mí</a></li>
+            <li><a href="/skills/">Skills</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+
+          <!-- Toggle tema -->
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Cambiar tema"
+          >
+            <span class="theme-toggle__icon">🌙</span>
+          </button>
+
+          <a href="#contact" class="nav__cta">Hablemos</a>
+
+          <!-- Hamburguesa -->
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+          >
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- MENÚ MÓVIL -->
+      <div class="mobile-menu">
+        <div class="mobile-menu__overlay" data-close-menu></div>
+        <div class="mobile-menu__panel">
+          <div class="mobile-menu__top">
+            <span class="mobile-menu__title">Menú</span>
+            <button
+              class="mobile-menu__close"
+              type="button"
+              aria-label="Cerrar menú"
+              data-close-menu
+            >
+              ✕
+            </button>
+          </div>
+
+          <ul class="mobile-menu__links">
+            <li><a href="#about" data-close-menu>SOBRE MÍ</a></li>
+            <li><a href="#skills" data-close-menu>SKILLS</a></li>
+            <li><a href="#projects" data-close-menu>PROYECTOS</a></li>
+            <li><a href="#services" data-close-menu>SERVICIOS</a></li>
+            <li><a href="#contact" data-close-menu>CONTACTO</a></li>
+          </ul>
+
+          <div class="mobile-menu__bottom">
+            <button
+              class="theme-toggle theme-toggle--mobile"
+              type="button"
+              aria-label="Cambiar tema"
+            >
+              <span class="theme-toggle__icon">🌙</span>
+              <span class="theme-toggle__label">Modo oscuro / claro</span>
+            </button>
+
+            <a
+              href="#contact"
+              class="mobile-menu__cta"
+              data-close-menu
+            >
+              HABLEMOS
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <main>
+      <!-- HERO SKILLS -->
+      <section class="page-hero">
+        <div class="page-hero__inner">
+          <div class="page-hero__badge">Skills & Stack</div>
+          <h1 class="page-hero__title">
+            Herramientas con las que construyo
+            <span>experiencias web modernas.</span>
+          </h1>
+          <p class="page-hero__text">
+            Aquí está el stack con el que trabajo en el día a día: desde lo más
+            básico (HTML, CSS) hasta herramientas para maquetar más rápido,
+            colaborar y dejar todo listo para escalar.
+          </p>
+
+          <div class="page-hero__tags">
+            <span>Frontend</span>
+            <span>UI</span>
+            <span>Product mindset</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRID PRINCIPAL DE SKILLS -->
+      <section class="section section--alt">
+        <div class="section__inner">
+          <h2 class="section__eyebrow">Stack principal</h2>
+          <p class="section__title">
+            Tecnologías con las que me siento más cómodo.
+          </p>
+
+          <div class="skills-grid">
+            <article class="skills-card">
+              <p class="skills-card__label">Frontend core</p>
+              <h3 class="skills-card__title">Base sólida para cualquier web.</h3>
+              <p class="skills-card__text">
+                Lo que uso para levantar interfaces claras y responsive, desde
+                cero o a partir de un diseño.
+              </p>
+
+              <div class="skills-chips">
+                <span class="skill-chip">HTML5</span>
+                <span class="skill-chip">CSS3</span>
+                <span class="skill-chip">Sass (básico)</span>
+                <span class="skill-chip">JavaScript</span>
+                <span class="skill-chip">Responsive design</span>
+              </div>
+            </article>
+
+            <article class="skills-card">
+              <p class="skills-card__label">Frameworks & ecosistema</p>
+              <h3 class="skills-card__title">
+                Para proyectos modernos y escalables.
+              </h3>
+              <p class="skills-card__text">
+                Tecnología con la que puedo construir experiencias más complejas
+                y fáciles de mantener.
+              </p>
+
+              <div class="skills-chips">
+                <span class="skill-chip">React (nivel base/intermedio)</span>
+                <span class="skill-chip">Astro</span>
+                <span class="skill-chip">Componentización</span>
+                <span class="skill-chip">SPA / MPAs</span>
+              </div>
+            </article>
+
+            <article class="skills-card">
+              <p class="skills-card__label">Herramientas & flujo</p>
+              <h3 class="skills-card__title">Para trabajar como dev, no solo “picar código”.</h3>
+              <p class="skills-card__text">
+                Cosas que uso para organizar el trabajo, controlar versiones y
+                colaborar mejor.
+              </p>
+
+              <div class="skills-chips">
+                <span class="skill-chip">Git</span>
+                <span class="skill-chip">GitHub</span>
+                <span class="skill-chip">Figma (básico)</span>
+                <span class="skill-chip">VS Code</span>
+                <span class="skill-chip">Terminal</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN EXTRA: CÓMO TRABAJO -->
+      <section class="section section--alt">
+        <div class="section__inner">
+          <div class="section__header">
+            <div>
+              <h2 class="section__eyebrow">Cómo trabajo</h2>
+              <p class="section__title">
+                No es solo el stack, es la forma de usarlo.
+              </p>
+            </div>
+          </div>
+
+          <div class="workflow-grid">
+            <article class="workflow-card">
+              <p class="workflow-card__label">01 · Entender</p>
+              <p class="workflow-card__text">
+                Primero entiendo el contexto: qué quieres lograr, a quién va
+                dirigido y qué rol juega la web en todo eso.
+              </p>
+            </article>
+
+            <article class="workflow-card">
+              <p class="workflow-card__label">02 · Diseñar la experiencia</p>
+              <p class="workflow-card__text">
+                Pienso la estructura, jerarquía, secciones y recorrido del
+                usuario antes de ponerme a escribir código a lo loco.
+              </p>
+            </article>
+
+            <article class="workflow-card">
+              <p class="workflow-card__label">03 · Construir & pulir</p>
+              <p class="workflow-card__text">
+                Maqueto, conecto lógica y voy ajustando detalles visuales y de
+                performance hasta que se sienta “redondo”.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="section section--contact">
+        <div class="section__inner section__inner--narrow">
+          <h2 class="section__eyebrow">¿Te sirve este stack?</h2>
+          <p class="section__title">
+            Si encaja con lo que buscas, podemos crear algo juntos.
+          </p>
+          <p class="section__text section__text--center">
+            Ya sea para una landing, un pequeño producto o para reforzar un
+            equipo, puedo aportar desde el frontend y la experiencia de usuario.
+          </p>
+
+          <div class="contact-cta">
+            <div class="contact-cta__info">
+              <p class="contact-cta__eyebrow">Próximo paso</p>
+              <h3 class="contact-cta__title">
+                Te comparto mis datos para que me escribas cuando quieras.
+              </h3>
+              <p class="contact-cta__text">
+                Copias mi correo, revisas mis redes y si ves encaje, me
+                escribes. Simple.
+              </p>
+            </div>
+
+            <div class="contact-cta__actions">
+              <button
+                type="button"
+                id="open-contact-modal"
+                class="contact-cta__button"
+              >
+                <span>Ver datos de contacto</span>
+                <span class="contact-cta__icon">⚡</span>
+              </button>
+              <p class="contact-cta__hint">
+                Verás mi email (para copiar) y mis redes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- MODAL DE CONTACTO -->
+    <div class="modal" id="contact-modal" aria-hidden="true">
+      <div class="modal__overlay" data-close-modal></div>
+
+      <div
+        class="modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-modal-title"
+      >
+        <button
+          class="modal__close"
+          type="button"
+          aria-label="Cerrar"
+          data-close-modal
+        >
+          ✕
+        </button>
+
+        <p class="modal__eyebrow">Contacto directo</p>
+
+        <h3 class="modal__title" id="contact-modal-title">
+          Tienes una idea, la construimos.
+        </h3>
+
+        <p class="modal__text">
+          Aquí tienes mis datos para que me escribas cuando quieras. Copia el
+          correo o abre la red que más uses.
+        </p>
+
+        <div class="modal__group">
+          <p class="modal__label">Email</p>
+
+          <button type="button" class="modal__email" id="copy-email-btn">
+            <span class="modal__email-value">samcubdev@gmail.com</span>
+            <span class="modal__email-copy">Copiar</span>
+          </button>
+
+          <span class="modal__copied" id="copied-badge" aria-hidden="true">
+            Correo copiado ✅
+          </span>
+        </div>
+
+        <div class="modal__group">
+          <p class="modal__label">Redes</p>
+
+          <div class="modal__socials">
+            <a
+              href="https://github.com/tuusuario"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://instagram.com/tuusuario"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="https://linkedin.com/in/tuusuario"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__name">Samuel Cubano</span>
+          <span class="footer__role">Desarrollador Web</span>
+        </div>
+
+        <div class="footer__links">
+          <a href="/index.html#hero">Inicio</a>
+          <a href="/about.html">Sobre mí</a>
+          <a href="/skills.html">Skills</a>
+        </div>
+
+        <div class="footer__social">
+          <a
+            href="https://github.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="GitHub"
+          >
+            GH
+          </a>
+          <a
+            href="https://instagram.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="Instagram"
+          >
+            IG
+          </a>
+          <a
+            href="https://linkedin.com/in/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="LinkedIn"
+          >
+            IN
+          </a>
+        </div>
+      </div>
+      <p class="footer__copy">
+        © <span id="year"></span> Samuel Cubano. Todos los derechos reservados.
+      </p>
+    </footer>
+
+        <script>
+// ===============================
+// SELECTORES GENERALES
+// ===============================
+const body = document.body;
+const toggleBtn = document.querySelector(".nav__toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeTriggers = document.querySelectorAll("[data-close-menu]");
+const desktopThemeToggle = document.querySelector(".theme-toggle");
+const mobileThemeToggle = document.querySelector(".theme-toggle--mobile");
+const yearSpan = document.getElementById("year");
+const revealEls = document.querySelectorAll(".reveal");
+
+// Modal contacto
+const contactModal = document.getElementById("contact-modal");
+const openModalBtn = document.getElementById("open-contact-modal");
+const closeModalEls = document.querySelectorAll("[data-close-modal]");
+const copyEmailBtn = document.getElementById("copy-email-btn");
+const copiedBadge = document.getElementById("copied-badge");
+const CONTACT_EMAIL = "samcubdev@gmail.com";
+
+// ===============================
+// NAV / MENÚ MÓVIL
+// ===============================
+function setMenu(open) {
+  if (!toggleBtn || !mobileMenu) return;
+  body.classList.toggle("nav-open", open);
+  toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
+}
+
+if (toggleBtn && mobileMenu) {
+  let isOpen = false;
+
+  toggleBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    setMenu(isOpen);
+  });
+
+  closeTriggers.forEach((el) => {
+    el.addEventListener("click", () => {
+      isOpen = false;
+      setMenu(false);
+    });
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen) {
+      isOpen = false;
+      setMenu(false);
+    }
+  });
+}
+
+// ===============================
+// TEMA OSCURO / CLARO
+// ===============================
+function applyTheme(theme) {
+  body.classList.remove("theme-dark", "theme-light");
+  body.classList.add(`theme-${theme}`);
+  localStorage.setItem("theme", theme);
+
+  const icon = theme === "dark" ? "🌙" : "☀️";
+  document.querySelectorAll(".theme-toggle__icon").forEach((el) => {
+    el.textContent = icon;
+  });
+}
+
+(function initTheme() {
+  const stored = localStorage.getItem("theme");
+  const prefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const theme = stored || (prefersDark ? "dark" : "light");
+  applyTheme(theme);
+})();
+
+function toggleTheme() {
+  const isDark = body.classList.contains("theme-dark");
+  applyTheme(isDark ? "light" : "dark");
+}
+
+if (desktopThemeToggle) desktopThemeToggle.addEventListener("click", toggleTheme);
+if (mobileThemeToggle) mobileThemeToggle.addEventListener("click", toggleTheme);
+
+// ===============================
+// ANIMACIÓN DE REVEAL AL HACER SCROLL
+// ===============================
+if ("IntersectionObserver" in window && revealEls.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.18 }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add("is-visible"));
+}
+
+// ===============================
+// AÑO EN EL FOOTER
+// ===============================
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
+// ===============================
+// MODAL DE CONTACTO
+// ===============================
+function setModal(open) {
+  if (!contactModal) return;
+  contactModal.classList.toggle("is-open", open);
+}
+
+if (openModalBtn && contactModal) {
+  openModalBtn.addEventListener("click", () => setModal(true));
+}
+
+closeModalEls.forEach((el) => {
+  el.addEventListener("click", () => setModal(false));
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && contactModal?.classList.contains("is-open")) {
+    setModal(false);
+  }
+});
+
+// ===============================
+// COPIAR CORREO AL PORTAPAPELES
+// ===============================
+if (copyEmailBtn && copiedBadge) {
+  copyEmailBtn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
+      copiedBadge.setAttribute("aria-hidden", "false");
+      copiedBadge.classList.add("is-visible");
+
+      setTimeout(() => {
+        copiedBadge.classList.remove("is-visible");
+        copiedBadge.setAttribute("aria-hidden", "true");
+      }, 1800);
+    } catch (err) {
+      console.error("No se pudo copiar el correo", err);
+      alert("No se pudo copiar. Copia manualmente: " + CONTACT_EMAIL);
+    }
+  });
+}
+
+</script>
+  </body>
+</html>
