@@ -1,0 +1,465 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contacto | Samuel Cubano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Contacto de Samuel Cubano. Cuéntame tu idea o proyecto y vemos cómo convertirla en una experiencia web real."
+    />
+    <link rel="stylesheet" href="/style/style-contact.css" />
+    <link rel="stylesheet" href="/style/style.css">
+  </head>
+  <body>
+     <header class="site-header">
+      <nav class="nav">
+        <a href="#hero" class="nav__brand">
+          <div class="nav__logo"></div>
+          <span class="nav__brand-text">Samuel Cubano</span>
+        </a>
+
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li><a href="/aboutme/">Sobre mí</a></li>
+            <li><a href="/skills/">Skills</a></li>
+            <li><a href="/projects/">Proyectos</a></li>
+            <li><a href="/services/">Servicios</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+
+          <!-- Toggle tema -->
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Cambiar tema"
+          >
+            <span class="theme-toggle__icon">🌙</span>
+          </button>
+
+          <a href="#contact" class="nav__cta">Hablemos</a>
+
+          <!-- Hamburguesa -->
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+          >
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- MENÚ MÓVIL -->
+      <div class="mobile-menu">
+        <div class="mobile-menu__overlay" data-close-menu></div>
+        <div class="mobile-menu__panel">
+          <div class="mobile-menu__top">
+            <span class="mobile-menu__title">Menú</span>
+            <button
+              class="mobile-menu__close"
+              type="button"
+              aria-label="Cerrar menú"
+              data-close-menu
+            >
+              ✕
+            </button>
+          </div>
+
+          <ul class="mobile-menu__links">
+            <li><a href="#about" data-close-menu>SOBRE MÍ</a></li>
+            <li><a href="#skills" data-close-menu>SKILLS</a></li>
+            <li><a href="#projects" data-close-menu>PROYECTOS</a></li>
+            <li><a href="#services" data-close-menu>SERVICIOS</a></li>
+            <li><a href="#contact" data-close-menu>CONTACTO</a></li>
+          </ul>
+
+          <div class="mobile-menu__bottom">
+            <button
+              class="theme-toggle theme-toggle--mobile"
+              type="button"
+              aria-label="Cambiar tema"
+            >
+              <span class="theme-toggle__icon">🌙</span>
+              <span class="theme-toggle__label">Modo oscuro / claro</span>
+            </button>
+
+            <a
+              href="#contact"
+              class="mobile-menu__cta"
+              data-close-menu
+            >
+              HABLEMOS
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO CONTACTO -->
+      <section class="page-hero">
+        <div class="page-hero__inner">
+          <div class="page-hero__badge">Contacto</div>
+          <h1 class="page-hero__title">
+            ¿Tienes una idea o proyecto en mente?
+            <span>La bajamos a código y la dejamos lista para usar.</span>
+          </h1>
+          <p class="page-hero__text">
+            Puedes escribirme cuando quieras. No hace falta tener todo definido:
+            me cuentas qué quieres lograr, en qué punto estás y te doy una mirada
+            honesta de cómo te puedo ayudar desde el desarrollo web.
+          </p>
+
+          <div class="page-hero__tags">
+            <span>Frontend</span>
+            <span>UX</span>
+            <span>Proyectos serios</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOQUE PRINCIPAL DE CONTACTO -->
+      <section class="section section--alt">
+        <div class="section__inner contact-layout">
+          <!-- Columna izquierda -->
+          <div class="contact-intro">
+            <h2 class="section__eyebrow">Cómo aprovechar mejor el contacto</h2>
+            <p class="section__title">
+              Escríbeme con estas tres cosas claras y vamos volando.
+            </p>
+            <ul class="contact-intro__list">
+              <li>
+                <strong>1. Contexto corto:</strong> qué hace tu proyecto, marca
+                o empresa.
+              </li>
+              <li>
+                <strong>2. Objetivo de la web:</strong> vender, captar leads,
+                agendar citas, mostrar tu trabajo, etc.
+              </li>
+              <li>
+                <strong>3. Tiempo aproximado:</strong> si tienes una fecha
+                límite o es algo más flexible.
+              </li>
+            </ul>
+            <p class="contact-intro__note">
+              Con eso ya puedo decirte si soy la persona adecuada para ayudarte,
+              cómo lo enfocaría y qué siguiente paso tiene sentido.
+            </p>
+          </div>
+
+          <!-- Columna derecha: tarjeta con datos -->
+          <aside class="contact-card">
+            <p class="contact-card__eyebrow">Contacto directo</p>
+            <h3 class="contact-card__title">
+              Aquí tienes mi correo y redes. Sin formularios eternos.
+            </h3>
+
+            <!-- Email copia -->
+            <div class="contact-card__group">
+              <p class="contact-card__label">Email</p>
+
+              <button type="button" class="contact-card__email" id="copy-email-btn">
+                <span class="contact-card__email-text">samcubdev@gmail.com</span>
+                <span class="contact-card__email-copy">Copiar</span>
+              </button>
+
+              <span
+                class="contact-card__copied"
+                id="copied-badge"
+                aria-hidden="true"
+              >
+                Correo copiado ✅
+              </span>
+            </div>
+
+            <!-- Redes -->
+            <div class="contact-card__group">
+              <p class="contact-card__label">Redes</p>
+              <div class="contact-card__socials">
+                <a
+                  href="https://github.com/tuusuario"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://instagram.com/tuusuario"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Instagram
+                </a>
+                <a
+                  href="https://linkedin.com/in/tuusuario"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+
+            <!-- CTA “armemos algo” -->
+            <div class="contact-card__group">
+              <p class="contact-card__label">¿Qué sigue?</p>
+              <p class="contact-card__text">
+                Copias el correo, me escribes con tu idea y, si vemos encaje,
+                armamos un pequeño plan de trabajo: qué hacemos, cuánto tarda y
+                qué necesitas tener listo.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- BLOQUE “PEQUEÑO BRIEF” (OPCIONAL) -->
+      <section class="section">
+        <div class="section__inner section__inner--narrow">
+          <h2 class="section__eyebrow">Si quieres ir un paso más allá</h2>
+          <p class="section__title">
+            Puedes copiar este mini brief y pegarlo en el correo.
+          </p>
+          <p class="section__text section__text--center">
+            Solo rellenas los espacios y me lo envías a
+            <strong>samcubdev@gmail.com</strong>. Así llegamos a la primera
+            llamada con media tarea hecha.
+          </p>
+
+          <div class="brief-card">
+            <pre class="brief-card__content">
+Hola Samuel, ¿cómo estás?
+
+Te escribo porque necesito ayuda con:
+
+- Tipo de proyecto (landing, sitio completo, micrositio, portafolio, etc.):
+- Qué hace mi producto / servicio:
+- Qué debería lograr la web (ej: conseguir leads, vender, agendar citas):
+- En qué fecha ideal te gustaría tenerlo listo:
+- Enlaces de referencia (si tienes):
+
+Cualquier otra info que creas importante:
+            </pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__name">Samuel Cubano</span>
+          <span class="footer__role">Desarrollador Web</span>
+        </div>
+
+        <div class="footer__links">
+          <a href="/index.html#hero">Inicio</a>
+          <a href="/about.html">Sobre mí</a>
+          <a href="/skills.html">Skills</a>
+          <a href="/projects.html">Proyectos</a>
+          <a href="/services.html">Servicios</a>
+          <a href="/contact.html">Contacto</a>
+        </div>
+
+        <div class="footer__social">
+          <a
+            href="https://github.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="GitHub"
+          >
+            GH
+          </a>
+          <a
+            href="https://instagram.com/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="Instagram"
+          >
+            IG
+          </a>
+          <a
+            href="https://linkedin.com/in/tuusuario"
+            target="_blank"
+            rel="noreferrer"
+            class="social-icon"
+            aria-label="LinkedIn"
+          >
+            IN
+          </a>
+        </div>
+      </div>
+      <p class="footer__copy">
+        © <span id="year"></span> Samuel Cubano. Todos los derechos reservados.
+      </p>
+    </footer>
+
+            <script>
+// ===============================
+// SELECTORES GENERALES
+// ===============================
+const body = document.body;
+const toggleBtn = document.querySelector(".nav__toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeTriggers = document.querySelectorAll("[data-close-menu]");
+const desktopThemeToggle = document.querySelector(".theme-toggle");
+const mobileThemeToggle = document.querySelector(".theme-toggle--mobile");
+const yearSpan = document.getElementById("year");
+const revealEls = document.querySelectorAll(".reveal");
+
+// Modal contacto
+const contactModal = document.getElementById("contact-modal");
+const openModalBtn = document.getElementById("open-contact-modal");
+const closeModalEls = document.querySelectorAll("[data-close-modal]");
+const copyEmailBtn = document.getElementById("copy-email-btn");
+const copiedBadge = document.getElementById("copied-badge");
+const CONTACT_EMAIL = "samcubdev@gmail.com";
+
+// ===============================
+// NAV / MENÚ MÓVIL
+// ===============================
+function setMenu(open) {
+  if (!toggleBtn || !mobileMenu) return;
+  body.classList.toggle("nav-open", open);
+  toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
+}
+
+if (toggleBtn && mobileMenu) {
+  let isOpen = false;
+
+  toggleBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    setMenu(isOpen);
+  });
+
+  closeTriggers.forEach((el) => {
+    el.addEventListener("click", () => {
+      isOpen = false;
+      setMenu(false);
+    });
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen) {
+      isOpen = false;
+      setMenu(false);
+    }
+  });
+}
+
+// ===============================
+// TEMA OSCURO / CLARO
+// ===============================
+function applyTheme(theme) {
+  body.classList.remove("theme-dark", "theme-light");
+  body.classList.add(`theme-${theme}`);
+  localStorage.setItem("theme", theme);
+
+  const icon = theme === "dark" ? "🌙" : "☀️";
+  document.querySelectorAll(".theme-toggle__icon").forEach((el) => {
+    el.textContent = icon;
+  });
+}
+
+(function initTheme() {
+  const stored = localStorage.getItem("theme");
+  const prefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const theme = stored || (prefersDark ? "dark" : "light");
+  applyTheme(theme);
+})();
+
+function toggleTheme() {
+  const isDark = body.classList.contains("theme-dark");
+  applyTheme(isDark ? "light" : "dark");
+}
+
+if (desktopThemeToggle) desktopThemeToggle.addEventListener("click", toggleTheme);
+if (mobileThemeToggle) mobileThemeToggle.addEventListener("click", toggleTheme);
+
+// ===============================
+// ANIMACIÓN DE REVEAL AL HACER SCROLL
+// ===============================
+if ("IntersectionObserver" in window && revealEls.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.18 }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add("is-visible"));
+}
+
+// ===============================
+// AÑO EN EL FOOTER
+// ===============================
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
+// ===============================
+// MODAL DE CONTACTO
+// ===============================
+function setModal(open) {
+  if (!contactModal) return;
+  contactModal.classList.toggle("is-open", open);
+}
+
+if (openModalBtn && contactModal) {
+  openModalBtn.addEventListener("click", () => setModal(true));
+}
+
+closeModalEls.forEach((el) => {
+  el.addEventListener("click", () => setModal(false));
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && contactModal?.classList.contains("is-open")) {
+    setModal(false);
+  }
+});
+
+// ===============================
+// COPIAR CORREO AL PORTAPAPELES
+// ===============================
+if (copyEmailBtn && copiedBadge) {
+  copyEmailBtn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
+      copiedBadge.setAttribute("aria-hidden", "false");
+      copiedBadge.classList.add("is-visible");
+
+      setTimeout(() => {
+        copiedBadge.classList.remove("is-visible");
+        copiedBadge.setAttribute("aria-hidden", "true");
+      }, 1800);
+    } catch (err) {
+      console.error("No se pudo copiar el correo", err);
+      alert("No se pudo copiar. Copia manualmente: " + CONTACT_EMAIL);
+    }
+  });
+}
+
+</script>
+  </body>
+</html>
