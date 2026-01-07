@@ -33,7 +33,7 @@ body {
   --bg-main: #050309;
   --bg-alt: rgba(255, 255, 255, 0.02);
   --card-bg: rgba(15, 23, 42, 0.9);
-  --border-soft: rgba(148, 163, 184, 0.22);
+  --border-soft: rgba(148, 163, 184, 0.25);
   --text-main: #e5e7eb;
   --text-muted: #9ca3af;
   --chip-bg: rgba(15, 23, 42, 0.7);

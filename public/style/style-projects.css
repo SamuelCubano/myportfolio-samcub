@@ -16,6 +16,29 @@
   --elevated-shadow: 0 25px 40px rgba(0, 0, 0, 0.4);
 }
 
+
+body.theme-dark {
+  --bg-main: #050309;
+  --bg-alt: rgba(255, 255, 255, 0.02);
+  --card-bg: rgba(15, 23, 42, 0.9);
+  --border-soft: rgba(148, 163, 184, 0.25);
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --chip-bg: rgba(15, 23, 42, 0.7);
+  --elevated-shadow: 0 0 30px rgba(15, 23, 42, 0.9);
+}
+
+body.theme-light {
+  --bg-main: #f9fafb;
+  --bg-alt: rgba(15, 23, 42, 0.03);
+  --card-bg: #ffffff;
+  --border-soft: rgba(255, 255, 255, 0.795);
+  --text-main: #020617;
+  --text-muted: #4b5563;
+  --chip-bg: rgba(148, 163, 184, 0.14);
+  --elevated-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+}
+
 *,
 *::before,
 *::after {
@@ -158,7 +181,7 @@ ul {
 
 .project-card {
   border-radius: 1.6rem;
-  border: 1px solid var(--border-soft);
+  border:1px solid var(--border-soft);
   background: rgba(15, 23, 42, 0.96);
   box-shadow: var(--elevated-shadow);
   overflow: hidden;
@@ -208,12 +231,13 @@ ul {
 }
 
 .project-card__pill {
+  color: var(--accent-magenta);
   position: relative;
   display: inline-flex;
   padding: 0.28rem 0.7rem;
   border-radius: 999px;
-  border: 1px solid rgba(15, 23, 42, 0.7);
-  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid var(--accent-magenta);
+  background: rgba(244, 114, 182, 0.1);
   font-size: 0.75rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -221,11 +245,13 @@ ul {
 
 .project-card__body {
   padding: 1.05rem 1.1rem 1.1rem;
+  background: var(--card-bg);
 }
 
 .project-card__title {
   margin: 0 0 0.3rem;
   font-size: 1rem;
+  color: var(--text-main);
 }
 
 .project-card__text {
