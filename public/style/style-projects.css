@@ -194,7 +194,9 @@ ul {
 }
 
 .project-card__thumb--magenta {
-  background: radial-gradient(circle at top, #db2777, #020617 50%);
+  background-image: url(/public/img/metodo-de-burbuja.PNG);
+  background-size: cover;
+  background-position: center;
 }
 
 .project-card__thumb--cyan {
