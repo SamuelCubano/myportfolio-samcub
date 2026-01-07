@@ -8,6 +8,9 @@
   --text-muted: #9ca3af;
   --border-soft: rgba(148, 163, 184, 0.25);
 
+
+  --card-hover:  background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.22), transparent 55%);
+
   --accent-magenta: #f472b6;
   --accent-cyan: #22d3ee;
   --accent-gold: #facc15;
@@ -26,6 +29,7 @@ body.theme-dark {
   --text-muted: #9ca3af;
   --chip-bg: rgba(15, 23, 42, 0.7);
   --elevated-shadow: 0 0 30px rgba(15, 23, 42, 0.9);
+   --card-hover:  background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.22), transparent 55%);
 }
 
 body.theme-light {
@@ -37,6 +41,7 @@ body.theme-light {
   --text-muted: #4b5563;
   --chip-bg: rgba(148, 163, 184, 0.14);
   --elevated-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+   --card-hover:  background: radial-gradient(top left, var(var(--accent-magenta)), transparent 55%);
 }
 
 *,
@@ -56,8 +61,9 @@ body {
   color: var(--text-main);
   font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial,
     sans-serif;
-  line-height: 1.6;
 }
+
+
 
 a {
   color: inherit;
@@ -71,6 +77,8 @@ ul {
 }
 
 
+
+
 /* SECCIONES BASE */
 .section {
   padding: 3.5rem 1rem;
@@ -78,10 +86,11 @@ ul {
 
 .section--alt {
   background: var(--bg-alt);
+  border-bottom: none;
 }
 
 .section--contact {
-  background: radial-gradient(circle at top, #111827 0, #020617 52%);
+  background: var(--bg-alt);
 }
 
 .section__inner {
@@ -91,14 +100,6 @@ ul {
 
 .section__inner--narrow {
   max-width: 780px;
-}
-
-.section__eyebrow {
-  margin: 0;
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent-magenta);
 }
 
 .section__title {
@@ -185,6 +186,7 @@ ul {
   background: rgba(15, 23, 42, 0.96);
   box-shadow: var(--elevated-shadow);
   overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .project-card__inner {
@@ -248,6 +250,13 @@ ul {
   background: var(--card-bg);
 }
 
+.project-card:hover {
+  transform: translateY(-5px);
+  transform: scale(1.09);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+
 .project-card__title {
   margin: 0 0 0.3rem;
   font-size: 1rem;
@@ -275,14 +284,8 @@ ul {
 }
 
 /* HOVER CARD */
-.project-card__inner:hover .project-card__body {
-  background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.22), transparent 55%);
-}
 
-.project-card__inner:hover {
-  transform: translateY(-3px);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
+
 
 /* CTA CONTACTO */
 .contact-cta {
@@ -396,9 +399,9 @@ ul {
   margin: 0 1rem;
   border-radius: 1.7rem;
   border: 1px solid var(--border-soft);
-  background: #020617;
+  background: var(--bg-main);
   box-shadow: var(--elevated-shadow);
-  padding: 1.3rem 1.3rem 1.5rem;
+  padding: 5rem 2rem 5rem;
 }
 
 .project-modal__close {
@@ -410,6 +413,7 @@ ul {
   cursor: pointer;
   font-size: 1.2rem;
   color: var(--text-muted);
+  z-index: 1;
 }
 
 .project-modal__grid {
@@ -480,15 +484,13 @@ ul {
 /* CARRUSEL */
 .carousel {
   position: relative;
-  border-radius: 1.3rem;
-  border: 1px solid var(--border-soft);
-  background: radial-gradient(circle at top, #111827, #020617 60%);
   overflow: hidden;
+  height: 350px;
 }
 
 .carousel__track {
   position: relative;
-  height: 250px;
+  height: 350px;
 }
 
 .carousel__slide {
@@ -528,14 +530,32 @@ ul {
 }
 
 /* diferentes fondos para que se vean distintos */
-.carousel__mock--1 {
-  background: linear-gradient(135deg, #ec4899, #1f2937);
+.carousel__mock--11 {
+  background-image: url(/img/metodo-de-burbuja.PNG);
+  background-size: cover;
+  background-position: center;
 }
-.carousel__mock--2 {
-  background: linear-gradient(135deg, #06b6d4, #0f172a);
+.carousel__mock--12 {
+  background-image: url(/img/metodo-de-burbuja2.PNG);
+  background-size: cover;
+  background-position: center;
 }
-.carousel__mock--3 {
-  background: linear-gradient(135deg, #22c55e, #111827);
+.carousel__mock--13 {
+  background-image: url(/img/metodo-de-burbuja3.PNG);
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel__mock--14 {
+  background-image: url(/img/metodo-de-burbuja4.PNG);
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel__mock--15 {
+  background-image: url(/img/metodo-de-burbuja5.PNG);
+  background-size: cover;
+  background-position: center;
 }
 .carousel__mock--4 {
   background: linear-gradient(135deg, #6366f1, #020617);
@@ -608,9 +628,14 @@ ul {
 
 /* FOOTER */
 .footer {
-  border-top: 1px solid rgba(148, 163, 184, 0.22);
-  padding: 1.6rem 1rem 1.8rem;
-  background: #020617;
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+  background: radial-gradient(
+      circle at top left,
+      rgba(244, 114, 182, 0.08),
+      transparent
+    ),
+    var(--bg-main);
+  padding: 1.5rem 1rem 1.8rem;
 }
 
 .footer__inner {
@@ -625,7 +650,7 @@ ul {
 
 .footer__name {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
 }
 
 .footer__role {
@@ -672,6 +697,14 @@ ul {
     display: block;
   }
 
+  .nav__toggle-line {
+    font-size: 1.3rem;
+    color: var(--accent-cyan);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
   .mobile-menu {
     display: block;
   }
@@ -683,6 +716,8 @@ ul {
   .project-modal__panel {
     padding: 1.1rem 1rem 1.3rem;
   }
+
+  
 }
 
 @media (min-width: 821px) {
@@ -700,4 +735,21 @@ ul {
     align-items: center;
     justify-content: space-between;
   }
+
+  .carousel {
+  position: relative;
+  border-radius: 1.3rem;
+  overflow: hidden;
+  height: 350px;
+}
+}
+
+
+.nav__toggle-line {
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  display: block;
+  margin: auto;
+  margin-top: 4px;
 }

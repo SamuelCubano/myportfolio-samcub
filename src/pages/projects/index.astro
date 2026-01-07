@@ -229,48 +229,7 @@
         </div>
       </section>
 
-      <!-- CTA FINAL -->
-      <section class="section section--contact">
-        <div class="section__inner section__inner--narrow">
-          <h2 class="section__eyebrow">¿Te imaginas tu proyecto aquí?</h2>
-          <p class="section__title">
-            Podemos armar algo a la medida y dejarlo listo para enseñar.
-          </p>
-          <p class="section__text section__text--center">
-            Si te gusta este tipo de trabajo, podemos adaptar este enfoque a tu
-            marca, tu producto o tu portafolio. Vemos la idea, definimos el
-            objetivo y bajamos todo a código.
-          </p>
-
-          <div class="contact-cta">
-            <div class="contact-cta__info">
-              <p class="contact-cta__eyebrow">Próximo paso</p>
-              <h3 class="contact-cta__title">
-                Te comparto mis datos para que me contactes.
-              </h3>
-              <p class="contact-cta__text">
-                Copias mi correo, revisas mis redes y si ves encaje, me
-                escribes. Sin presión.
-              </p>
-            </div>
-
-            <div class="contact-cta__actions">
-              <button
-                type="button"
-                id="open-contact-modal"
-                class="contact-cta__button"
-              >
-                <span>Ver datos de contacto</span>
-                <span class="contact-cta__icon">⚡</span>
-              </button>
-              <p class="contact-cta__hint">
-                Verás mi email (para copiar) y mis redes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+     
 
     <!-- MODALES DE PROYECTO -->
     <!-- MODAL PROYECTO 1 -->
@@ -296,17 +255,27 @@
           <div class="carousel" data-carousel>
             <div class="carousel__track">
               <div class="carousel__slide is-active">
-                <div class="carousel__mock carousel__mock--1">
+                <div class="carousel__mock carousel__mock--11">
                   <span>Hero principal</span>
                 </div>
               </div>
               <div class="carousel__slide">
-                <div class="carousel__mock carousel__mock--2">
+                <div class="carousel__mock carousel__mock--12">
                   <span>Sección features</span>
                 </div>
               </div>
               <div class="carousel__slide">
-                <div class="carousel__mock carousel__mock--3">
+                <div class="carousel__mock carousel__mock--13">
+                  <span>Formulario de contacto</span>
+                </div>
+              </div>
+              <div class="carousel__slide">
+                <div class="carousel__mock carousel__mock--14">
+                  <span>Formulario de contacto</span>
+                </div>
+              </div>
+              <div class="carousel__slide">
+                <div class="carousel__mock carousel__mock--15">
                   <span>Formulario de contacto</span>
                 </div>
               </div>
@@ -360,10 +329,9 @@
             </dl>
 
             <div class="project-modal__links">
-              <a href="#" target="_blank" class="project-link project-link--primary"
-                >Ver demo (placeholder)</a
+              <a href="https://university-bubble-sort-project-iujo.vercel.app/" target="_blank" class="project-link project-link--primary">Ver demo (placeholder)</a
               >
-              <a href="#" target="_blank" class="project-link">Ver código</a>
+              <a href="https://github.com/SamuelCubano/University-Bubble-Sort-Project" target="_blank" class="project-link">Ver código</a>
             </div>
           </div>
         </div>
@@ -559,6 +527,116 @@
       </div>
     </div>
 
+    
+<!-- CONTACT -->
+<section id="contact" class="section section--contact reveal is-visible" style="border-block: none;">
+  <div class="section__inner section__inner--narrow">
+    <h2 class="section__eyebrow">Contacto</h2> 
+    <!-- NUEVO CTA DE CONTACTO -->
+    <div class="contact-cta">
+      <div class="contact-cta__info">
+        <p class="contact-cta__eyebrow">Hablemos de tu idea</p>
+        <h3 class="contact-cta__title">
+          ¿Quieres lanzar, renovar o mejorar tu sitio?
+        </h3>
+        <p class="contact-cta__text">
+          Te comparto mi correo y redes en un solo lugar para que elijas cómo
+          contactarme.
+        </p>
+      </div>
+
+      <div class="contact-cta__actions">
+        <button
+          type="button"
+          id="open-contact-modal"
+          class="btn btn--primary"
+        >
+          Ver datos de contacto
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL DE CONTACTO -->
+<div class="modal" id="contact-modal" aria-hidden="true">
+  <div class="modal__overlay" data-close-modal></div>
+
+  <div
+    class="modal__panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contact-modal-title"
+  >
+    <!-- Botón cerrar -->
+    <button
+      class="modal__close"
+      type="button"
+      aria-label="Cerrar"
+      data-close-modal
+    >
+      ✕
+    </button>
+
+    <p class="modal__eyebrow">Contacto directo</p>
+
+    <h3 class="modal__title" id="contact-modal-title">
+      Tienes una idea, la construimos.
+    </h3>
+
+    <p class="modal__text">
+      Aquí tienes mis datos para que me escribas cuando quieras. Copia el correo
+      o abre la red que más uses y listo.
+    </p>
+
+    <!-- Email -->
+    <div class="modal__group">
+      <p class="modal__label">Email</p>
+
+      <button type="button" class="modal__email" id="copy-email-btn">
+        <span class="modal__email-value">samcubdev@gmail.com</span>
+        <span class="modal__email-copy">Copiar</span>
+      </button>
+
+      <span class="modal__copied" id="copied-badge" aria-hidden="true">
+        Correo copiado ✅
+      </span>
+    </div>
+
+    <!-- Redes -->
+    <div class="modal__group">
+      <p class="modal__label">Redes</p>
+
+      <div class="modal__socials">
+        <a
+          href="https://github.com/SamuelCubano"
+          target="_blank"
+          rel="noreferrer"
+        ><i class="fa-brands fa-github"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/samuelcubano/"
+          target="_blank"
+          rel="noreferrer"
+        ><i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/samuel-cubano-0b520b288/"
+          target="_blank"
+          rel="noreferrer"
+        ><i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__inner">
@@ -567,45 +645,35 @@
           <span class="footer__role">Desarrollador Web</span>
         </div>
 
-        <div class="footer__links">
-          <a href="/index.html#hero">Inicio</a>
-          <a href="/about.html">Sobre mí</a>
-          <a href="/skills.html">Skills</a>
-          <a href="/projects.html">Proyectos</a>
-        </div>
-
         <div class="footer__social">
           <a
-            href="https://github.com/tuusuario"
+            href="https://github.com/SamuelCubano"
             target="_blank"
             rel="noreferrer"
             class="social-icon"
             aria-label="GitHub"
-          >
-            GH
+          ><i class="fa-brands fa-github"></i>
           </a>
           <a
-            href="https://instagram.com/tuusuario"
+            href="https://www.instagram.com/samuelcubano/"
             target="_blank"
             rel="noreferrer"
             class="social-icon"
             aria-label="Instagram"
-          >
-            IG
+          ><i class="fa-brands fa-instagram"></i>
           </a>
           <a
-            href="https://linkedin.com/in/tuusuario"
+            href="https://www.linkedin.com/in/samuel-cubano-0b520b288/"
             target="_blank"
             rel="noreferrer"
             class="social-icon"
             aria-label="LinkedIn"
-          >
-            IN
+          ><i class="fa-brands fa-linkedin"></i>
           </a>
         </div>
       </div>
       <p class="footer__copy">
-        © <span id="year"></span> Samuel Cubano. Todos los derechos reservados.
+        © <span id="year"></span> Samuel Cubano
       </p>
     </footer>
 
