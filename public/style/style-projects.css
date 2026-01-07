@@ -194,7 +194,7 @@ ul {
 }
 
 .project-card__thumb--magenta {
-  background-image: url(/public/img/metodo-de-burbuja.PNG);
+  background-image: url(/img/metodo-de-burbuja.PNG);
   background-size: cover;
   background-position: center;
 }
