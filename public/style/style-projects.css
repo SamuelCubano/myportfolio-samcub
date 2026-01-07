@@ -485,12 +485,12 @@ ul {
 .carousel {
   position: relative;
   overflow: hidden;
-  height: 330px;
+  height: 310px;
 }
 
 .carousel__track {
   position: relative;
-  height: 330px;
+  height: 310px;
 }
 
 .carousel__slide {
