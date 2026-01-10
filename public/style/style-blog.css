@@ -289,6 +289,15 @@ ul {
 }
 
 
+.blog-card__thumb--one,
+.blog-card__thumb--two,
+.blog-card__thumb--three,
+.blog-card__thumb--four,
+.blog-card__thumb--five,
+.blog-card__thumb--six {
+  background-image: none !important;
+}
+
 .blog-card {
   content-visibility: auto;
   contain-intrinsic-size: 320px; /* aprox alto card */
