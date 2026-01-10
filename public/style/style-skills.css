@@ -557,3 +557,14 @@ i {
   font-size: 22px;
   margin: 0;
 }
+
+
+.nav__toggle-line {
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  display: block;
+  margin: auto;
+  margin-top: 4px;
+  text-align: center;
+}

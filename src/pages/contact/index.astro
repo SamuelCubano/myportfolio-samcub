@@ -13,11 +13,18 @@
     />
     <link rel="stylesheet" href="/style/style-contact.css" />
     <link rel="stylesheet" href="/style/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cf1fb60fea.js" crossorigin="anonymous"></script>
   </head>
-  <body>
-     <header class="site-header">
+ <body class="theme-dark">
+
+    <!-- HEADER / NAV -->
+    <header class="site-header">
       <nav class="nav">
-        <a href="#hero" class="nav__brand">
+        <a href="/" class="nav__brand">
           <div class="nav__logo"></div>
           <span class="nav__brand-text">Samuel Cubano</span>
         </a>
@@ -40,7 +47,7 @@
             <span class="theme-toggle__icon">🌙</span>
           </button>
 
-          <a href="#contact" class="nav__cta">Hablemos</a>
+          <a href="/blog/" class="nav__cta">Blog</a>
 
           <!-- Hamburguesa -->
           <button
@@ -73,11 +80,11 @@
           </div>
 
           <ul class="mobile-menu__links">
-            <li><a href="#about" data-close-menu>SOBRE MÍ</a></li>
-            <li><a href="#skills" data-close-menu>SKILLS</a></li>
-            <li><a href="#projects" data-close-menu>PROYECTOS</a></li>
-            <li><a href="#services" data-close-menu>SERVICIOS</a></li>
-            <li><a href="#contact" data-close-menu>CONTACTO</a></li>
+            <li><a href="/aboutme/" data-close-menu>SOBRE MÍ</a></li>
+            <li><a href="/skills/" data-close-menu>SKILLS</a></li>
+            <li><a href="/projects/" data-close-menu>PROYECTOS</a></li>
+            <li><a href="/services/" data-close-menu>SERVICIOS</a></li>
+            <li><a href="/contact/" data-close-menu>CONTACTO</a></li>
           </ul>
 
           <div class="mobile-menu__bottom">
@@ -91,11 +98,11 @@
             </button>
 
             <a
-              href="#contact"
+              href="/blog/"
               class="mobile-menu__cta"
               data-close-menu
             >
-              HABLEMOS
+              Blog
             </a>
           </div>
         </div>
@@ -221,36 +228,10 @@
       </section>
 
       <!-- BLOQUE “PEQUEÑO BRIEF” (OPCIONAL) -->
-      <section class="section">
-        <div class="section__inner section__inner--narrow">
-          <h2 class="section__eyebrow">Si quieres ir un paso más allá</h2>
-          <p class="section__title">
-            Puedes copiar este mini brief y pegarlo en el correo.
-          </p>
-          <p class="section__text section__text--center">
-            Solo rellenas los espacios y me lo envías a
-            <strong>samcubdev@gmail.com</strong>. Así llegamos a la primera
-            llamada con media tarea hecha.
-          </p>
-
-          <div class="brief-card">
-            <pre class="brief-card__content">
-Hola Samuel, ¿cómo estás?
-
-Te escribo porque necesito ayuda con:
-
-- Tipo de proyecto (landing, sitio completo, micrositio, portafolio, etc.):
-- Qué hace mi producto / servicio:
-- Qué debería lograr la web (ej: conseguir leads, vender, agendar citas):
-- En qué fecha ideal te gustaría tenerlo listo:
-- Enlaces de referencia (si tienes):
-
-Cualquier otra info que creas importante:
-            </pre>
-          </div>
-        </div>
-      </section>
+     
     </main>
+
+    <!-- FOOTER -->
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -260,47 +241,35 @@ Cualquier otra info que creas importante:
           <span class="footer__role">Desarrollador Web</span>
         </div>
 
-        <div class="footer__links">
-          <a href="/index.html#hero">Inicio</a>
-          <a href="/about.html">Sobre mí</a>
-          <a href="/skills.html">Skills</a>
-          <a href="/projects.html">Proyectos</a>
-          <a href="/services.html">Servicios</a>
-          <a href="/contact.html">Contacto</a>
-        </div>
-
         <div class="footer__social">
           <a
-            href="https://github.com/tuusuario"
+            href="https://github.com/SamuelCubano"
             target="_blank"
             rel="noreferrer"
             class="social-icon"
             aria-label="GitHub"
-          >
-            GH
+          ><i class="fa-brands fa-github"></i>
           </a>
           <a
-            href="https://instagram.com/tuusuario"
+            href="https://www.instagram.com/samuelcubano/"
             target="_blank"
             rel="noreferrer"
             class="social-icon"
             aria-label="Instagram"
-          >
-            IG
+          ><i class="fa-brands fa-instagram"></i>
           </a>
           <a
-            href="https://linkedin.com/in/tuusuario"
+            href="https://www.linkedin.com/in/samuel-cubano-0b520b288/"
             target="_blank"
             rel="noreferrer"
             class="social-icon"
             aria-label="LinkedIn"
-          >
-            IN
+          ><i class="fa-brands fa-linkedin"></i>
           </a>
         </div>
       </div>
       <p class="footer__copy">
-        © <span id="year"></span> Samuel Cubano. Todos los derechos reservados.
+        © <span id="year"></span> Samuel Cubano
       </p>
     </footer>
 
