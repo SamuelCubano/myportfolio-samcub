@@ -270,6 +270,25 @@ ul {
   opacity: 0.96;
 }
 
+.blog-card__thumb {
+  height: 170px;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom right,
+    rgba(236, 72, 153, 0.14),
+    rgba(56, 189, 248, 0.12)
+  );
+}
+
+.blog-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+}
+
+
 .blog-card {
   content-visibility: auto;
   contain-intrinsic-size: 320px; /* aprox alto card */
