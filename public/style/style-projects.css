@@ -596,10 +596,12 @@ ul {
 
 .carousel__control--prev {
   left: 10px;
+  border: solid var(--accent-magenta);
 }
 
 .carousel__control--next {
   right: 10px;
+  border: solid var(--accent-magenta);
 }
 
 /* Dots */
