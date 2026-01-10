@@ -809,7 +809,7 @@ if (copyEmailBtn && copiedBadge) {
 </script>
 
 <script>
-(function () {
+(() => {
   const searchInput = document.getElementById("blog-search");
   const yearSelect = document.getElementById("filter-year");
   const monthSelect = document.getElementById("filter-month");
@@ -820,70 +820,78 @@ if (copyEmailBtn && copiedBadge) {
   const backToTopBtn = document.getElementById("back-to-top");
   const blogTop = document.querySelector(".blog-anchor");
 
+  if (!grid) return;
 
-  let cards = Array.from(document.querySelectorAll(".blog-card"));
+  let cards = Array.from(grid.querySelectorAll(".blog-card"));
   let activeTag = "all";
   let visibleCount = 6;
   let lastFiltered = [];
 
-  // ------- ORDENAR POR FECHA (DESC) -------
-  cards.sort((a, b) => {
-    const da = new Date(a.dataset.date);
-    const db = new Date(b.dataset.date);
-    return db - da; // más nuevos primero
-  });
-
-  // Render inicial según orden
-  cards.forEach((card) => grid.appendChild(card));
-
-  function normalizar(str) {
-    return (str || "")
+  // ---------- Utils ----------
+  const normalize = (str) =>
+    (str || "")
       .toLowerCase()
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "");
+
+  const debounce = (fn, wait = 120) => {
+    let t;
+    return (...args) => {
+      clearTimeout(t);
+      t = setTimeout(() => fn(...args), wait);
+    };
+  };
+
+  // ---------- Ordenar por fecha DESC una sola vez ----------
+  cards.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+  cards.forEach((c) => grid.appendChild(c));
+
+  // ---------- Mostrar/Ocultar sin inline styles pesados ----------
+  // Usamos hidden (display:none nativo) + clases para animar suavemente.
+  function setCardVisible(card, shouldShow, animate = false) {
+    if (shouldShow) {
+      // Si ya estaba visible, no hacemos nada
+      if (!card.hidden) return;
+
+      card.hidden = false;
+      card.classList.remove("is-hidden");
+
+      if (animate) {
+        card.classList.add("is-enter");
+        // Quitamos clase al terminar para que no se buguee/re-animen todas
+        const onEnd = () => {
+          card.classList.remove("is-enter");
+          card.removeEventListener("animationend", onEnd);
+        };
+        card.addEventListener("animationend", onEnd);
+      }
+    } else {
+      if (card.hidden) return;
+      card.classList.remove("is-enter");
+      card.classList.add("is-hidden");
+      // Espera 1 frame para que el transform/opacity se apliquen (si quieres micro-fade),
+      // pero como ocultamos layout con hidden, lo hacemos directo:
+      card.hidden = true;
+    }
   }
 
-  function actualizarBackToTop(lista) {
+  function updateBackToTop(listLength) {
     if (!backToTopBtn) return;
-    const shouldShow =
-      lista.length > 6 && window.scrollY > 300; // solo si hay más de 6 y has bajado
+    const shouldShow = listLength > 6 && window.scrollY > 300;
     backToTopBtn.classList.toggle("is-visible", shouldShow);
   }
 
-  function mostrarGradualmente(lista) {
-    lista.forEach((card, index) => {
-      if (index < visibleCount) {
-        card.style.display = "";
-        card.style.opacity = "1";
-        card.style.pointerEvents = "auto";
-        card.classList.add("blog-card--visible");
-      } else {
-        card.style.display = "none";
-      }
-    });
+  // ---------- Render según filtros + paginado ----------
+  function applyFilters() {
+    const term = normalize(searchInput?.value);
+    const year = yearSelect?.value || "all";
+    const month = monthSelect?.value || "all";
 
-    // Botón ver más
-    if (loadMoreBtn) {
-      if (visibleCount >= lista.length) {
-        loadMoreBtn.style.display = "none";
-      } else {
-        loadMoreBtn.style.display = "inline-block";
-      }
-    }
+    const filtered = [];
 
-    actualizarBackToTop(lista);
-  }
-
-  function aplicarFiltros() {
-    const term = normalizar(searchInput ? searchInput.value : "");
-    const year = yearSelect ? yearSelect.value : "all";
-    const month = monthSelect ? monthSelect.value : "all";
-
-    const filtradas = [];
-
-    cards.forEach((card) => {
-      const title = normalizar(card.dataset.title);
-      const tags = normalizar(card.dataset.tags);
+    for (const card of cards) {
+      const title = normalize(card.dataset.title);
+      const tags = normalize(card.dataset.tags);
       const cardYear = card.dataset.year;
       const cardMonth = card.dataset.month;
 
@@ -894,88 +902,113 @@ if (copyEmailBtn && copiedBadge) {
       if (month !== "all" && cardMonth !== month) match = false;
       if (activeTag !== "all" && !tags.includes(activeTag)) match = false;
 
-      if (match) {
-        filtradas.push(card);
-      } else {
-        card.style.display = "none";
-      }
-    });
-
-    lastFiltered = filtradas;
-    mostrarGradualmente(lastFiltered);
-
-    if (emptyState) {
-      emptyState.hidden = filtradas.length > 0;
+      if (match) filtered.push(card);
     }
+
+    lastFiltered = filtered;
+
+    // Empty state
+    if (emptyState) emptyState.hidden = filtered.length > 0;
+
+    // Mostrar gradual: solo los primeros visibleCount
+    // IMPORTANTE: aquí ocultamos SOLO lo necesario, sin estilos inline.
+    filtered.forEach((card, idx) => {
+      const shouldShow = idx < visibleCount;
+      // Animar solo cuando pasa de oculto->visible
+      setCardVisible(card, shouldShow, shouldShow);
+    });
+
+    // Ocultar los que NO están filtrados
+    // (evitas que queden por ahí visibles por error)
+    const filteredSet = new Set(filtered);
+    for (const card of cards) {
+      if (!filteredSet.has(card)) setCardVisible(card, false);
+    }
+
+    // Load more
+    if (loadMoreBtn) {
+      loadMoreBtn.style.display =
+        visibleCount >= filtered.length ? "none" : "inline-block";
+    }
+
+    updateBackToTop(filtered.length);
   }
 
-  // ===============================
-  // EVENTOS DE FILTRO / BÚSQUEDA
-  // ===============================
-  if (searchInput) {
-    searchInput.addEventListener("input", () => {
-      visibleCount = 6;
-      aplicarFiltros();
-    });
-  }
+  // ---------- Eventos ----------
+  const applyFiltersDebounced = debounce(() => {
+    visibleCount = 6;
+    applyFilters();
+  }, 140);
 
-  if (yearSelect) {
-    yearSelect.addEventListener("change", () => {
-      visibleCount = 6;
-      aplicarFiltros();
-    });
-  }
-
-  if (monthSelect) {
-    monthSelect.addEventListener("change", () => {
-      visibleCount = 6;
-      aplicarFiltros();
-    });
-  }
+  searchInput?.addEventListener("input", applyFiltersDebounced);
+  yearSelect?.addEventListener("change", () => {
+    visibleCount = 6;
+    applyFilters();
+  });
+  monthSelect?.addEventListener("change", () => {
+    visibleCount = 6;
+    applyFilters();
+  });
 
   tagButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       tagButtons.forEach((b) => b.classList.remove("tag-chip--active"));
       btn.classList.add("tag-chip--active");
       activeTag = btn.dataset.tag || "all";
-
       visibleCount = 6;
-      aplicarFiltros();
+      applyFilters();
     });
   });
 
-  // ===============================
-  // BOTÓN VER MÁS
-  // ===============================
-  if (loadMoreBtn) {
-    loadMoreBtn.addEventListener("click", () => {
-      visibleCount += 6;
-      aplicarFiltros();
+  loadMoreBtn?.addEventListener("click", () => {
+    const prev = visibleCount;
+    visibleCount += 6;
 
-      // al darle click y haber más de 6, mostramos de una el botón arriba
-      if (backToTopBtn && lastFiltered.length > 6) {
-        backToTopBtn.classList.add("is-visible");
+    // Render pero animando solo las NUEVAS
+    applyFilters();
+
+    // Bonus: si quieres que SOLO las nuevas tengan animación extra,
+    // podríamos detectarlas con prev..visibleCount.
+    // (Con el setCardVisible actual ya anima solo cuando aparece.)
+
+    if (backToTopBtn && lastFiltered.length > 6) {
+      backToTopBtn.classList.add("is-visible");
+    }
+  });
+
+  // Scroll ultra suave (rAF + passive)
+  let ticking = false;
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          updateBackToTop(lastFiltered.length);
+          ticking = false;
+        });
       }
-    });
-  }
+    },
+    { passive: true }
+  );
 
-  // ===============================
-  // BOTÓN VOLVER ARRIBA
-  // ===============================
+  // Volver arriba
   if (backToTopBtn && blogTop) {
     backToTopBtn.addEventListener("click", () => {
       blogTop.scrollIntoView({ behavior: "smooth", block: "start" });
     });
-
-    window.addEventListener("scroll", () => {
-      actualizarBackToTop(lastFiltered);
-    });
   }
 
-  // Llamada inicial
-  aplicarFiltros();
+  // Estado inicial: oculta todas, luego aplica filtros
+  cards.forEach((c) => {
+    c.hidden = true;
+    c.classList.add("is-hidden");
+  });
+
+  applyFilters();
 })();
 </script>
+
 
 
 <button

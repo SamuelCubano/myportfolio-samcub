@@ -270,6 +270,12 @@ ul {
   opacity: 0.96;
 }
 
+.blog-card {
+  content-visibility: auto;
+  contain-intrinsic-size: 320px; /* aprox alto card */
+}
+
+
 .blog-card--visible {
   animation: blogCardIn 0.25s ease-out;
 }
