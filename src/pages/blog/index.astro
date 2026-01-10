@@ -11,26 +11,32 @@
     <link rel="stylesheet" href="/style/style.css" />
     <link rel="stylesheet" href="/style/style-blog.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cf1fb60fea.js" crossorigin="anonymous"></script>
+
   </head>
-  <body>
+ <body class="theme-dark">
+
     <!-- HEADER / NAV -->
     <header class="site-header">
       <nav class="nav">
-        <a href="/index.html#hero" class="nav__brand">
+        <a href="#" class="nav__brand">
+          <div class="nav__logo"></div>
           <span class="nav__brand-text">Samuel Cubano</span>
         </a>
 
         <div class="nav__right">
           <ul class="nav__links">
-            <li><a href="/index.html#hero">Inicio</a></li>
-            <li><a href="/about.html">Sobre mí</a></li>
-            <li><a href="/skills.html">Skills</a></li>
-            <li><a href="/projects.html">Proyectos</a></li>
-            <li><a href="/services.html">Servicios</a></li>
-            <li><a href="/blog.html" class="nav__link--active">Blog</a></li>
-            <li><a href="/contact.html">Contacto</a></li>
+            <li><a href="/aboutme/">Sobre mí</a></li>
+            <li><a href="/skills/">Skills</a></li>
+            <li><a href="/projects/">Proyectos</a></li>
+            <li><a href="/services/">Servicios</a></li>
+            <li><a href="/contact/">Contacto</a></li>
           </ul>
 
+          <!-- Toggle tema -->
           <button
             class="theme-toggle"
             type="button"
@@ -39,8 +45,9 @@
             <span class="theme-toggle__icon">🌙</span>
           </button>
 
-          <a href="/contact.html" class="nav__cta">Hablemos</a>
+          <a href="/blog/" class="nav__cta">Blog</a>
 
+          <!-- Hamburguesa -->
           <button
             class="nav__toggle"
             type="button"
@@ -71,20 +78,11 @@
           </div>
 
           <ul class="mobile-menu__links">
-            <li><a href="/index.html#hero" data-close-menu>INICIO</a></li>
-            <li><a href="/about.html" data-close-menu>SOBRE MÍ</a></li>
-            <li><a href="/skills.html" data-close-menu>SKILLS</a></li>
-            <li><a href="/projects.html" data-close-menu>PROYECTOS</a></li>
-            <li><a href="/services.html" data-close-menu>SERVICIOS</a></li>
-            <li>
-              <a
-                href="/blog.html"
-                data-close-menu
-                class="nav__link--active"
-                >BLOG</a
-              >
-            </li>
-            <li><a href="/contact.html" data-close-menu>CONTACTO</a></li>
+            <li><a href="/aboutme/" data-close-menu>SOBRE MÍ</a></li>
+            <li><a href="/skills/" data-close-menu>SKILLS</a></li>
+            <li><a href="/projects/" data-close-menu>PROYECTOS</a></li>
+            <li><a href="/services/" data-close-menu>SERVICIOS</a></li>
+            <li><a href="/contact/" data-close-menu>CONTACTO</a></li>
           </ul>
 
           <div class="mobile-menu__bottom">
@@ -98,16 +96,17 @@
             </button>
 
             <a
-              href="/contact.html"
+              href="/blog/"
               class="mobile-menu__cta"
               data-close-menu
             >
-              HABLEMOS
+              Blog
             </a>
           </div>
         </div>
       </div>
     </header>
+
 
     <main>
       <!-- HERO BLOG -->
@@ -610,6 +609,7 @@
       </section>
     </main>
 
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__inner">
@@ -618,48 +618,35 @@
           <span class="footer__role">Desarrollador Web</span>
         </div>
 
-        <div class="footer__links">
-          <a href="/index.html#hero">Inicio</a>
-          <a href="/about.html">Sobre mí</a>
-          <a href="/skills.html">Skills</a>
-          <a href="/projects.html">Proyectos</a>
-          <a href="/services.html">Servicios</a>
-          <a href="/blog.html">Blog</a>
-          <a href="/contact.html">Contacto</a>
-        </div>
-
         <div class="footer__social">
           <a
-            href="https://github.com/tuusuario"
+            href="https://github.com/SamuelCubano"
             target="_blank"
             rel="noreferrer"
             class="social-icon"
             aria-label="GitHub"
-          >
-            GH
+          ><i class="fa-brands fa-github"></i>
           </a>
           <a
-            href="https://instagram.com/tuusuario"
+            href="https://www.instagram.com/samuelcubano/"
             target="_blank"
             rel="noreferrer"
             class="social-icon"
             aria-label="Instagram"
-          >
-            IG
+          ><i class="fa-brands fa-instagram"></i>
           </a>
           <a
-            href="https://linkedin.com/in/tuusuario"
+            href="https://www.linkedin.com/in/samuel-cubano-0b520b288/"
             target="_blank"
             rel="noreferrer"
             class="social-icon"
             aria-label="LinkedIn"
-          >
-            IN
+          ><i class="fa-brands fa-linkedin"></i>
           </a>
         </div>
       </div>
       <p class="footer__copy">
-        © <span id="year"></span> Samuel Cubano. Todos los derechos reservados.
+        © <span id="year"></span> Samuel Cubano
       </p>
     </footer>
 
